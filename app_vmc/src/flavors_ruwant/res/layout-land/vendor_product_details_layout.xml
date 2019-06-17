@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.want.vmc.product.info.details.ProductDetailsViewModel" />
+
+    </data>
+
+    <!--
+    ~
+    ~ 
+    ~
+    -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/dp20">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="260">
+
+            <ImageView
+                android:id="@+id/vendor_product_pic"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/vendor_product_background"
+                app:image_url="@{model.imageUrl}"
+                tools:src="@drawable/default_image" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/vendor_product_add_over"
+                android:visibility="@{model.promotionAdd}" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/vendor_rr_info"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@+id/vendor_product_pic"
+            android:layout_weight="62">
+
+            <LinearLayout
+                android:id="@+id/vendor_name_ll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="@dimen/dp20"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp20"
+                    android:background="@{model.getProType}"
+                    android:visibility="@{model.promotionVisible}" />
+
+                <TextView
+                    android:id="@+id/product_details_name_text"
+                    style="@style/Vendor.Text"
+                    android:layout_marginLeft="@dimen/dp10"
+                    android:text="@{model.name}"
+                    android:textColor="@color/black"
+                    android:textSize="21dp"
+                    android:ellipsize="end"
+                    android:maxEms="11"
+                    tools:text="可口可乐" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/vendor_ll_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:id="@+id/vendor_old_price"
+                    style="@style/Vendor.Text"
+                    android:layout_marginRight="10dp"
+                    android:text="@{model.olderPriceYuan}"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dp16"
+
+                    android:visibility="@{model.showOlderPrice}"
+                    tools:text="¥ 25.00" />
+
+                <TextView
+                    android:id="@+id/vendor_show_price"
+                    style="@style/Vendor.Text"
+                    android:text="@{model.getPriceYuan}"
+                    android:textColor="@color/black"
+                    tools:text="¥ 25.00" />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/promotion_type_text"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/vendor_rr_info"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginTop="@dimen/dp2"
+            android:layout_weight="20"
+            android:text="@{model.compaign}"
+            android:textSize="14dp"
+            android:visibility="@{model.promotionInVisible}"
+            tools:text="活动" />
+
+    </LinearLayout>
+</layout>

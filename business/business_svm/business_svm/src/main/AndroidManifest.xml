@@ -1,0 +1,21 @@
+<manifest package="com.vmc.api" xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL" />
+    <uses-permission android:name="android.permission.GET_TOP_ACTIVITY_INFO" />
+    <uses-permission android:name="android.permission.REORDER_TASKS" />
+
+    <application>
+
+
+        <receiver android:name="com.vmc.api.ReplenishReceiver">
+            <intent-filter android:priority="1000">
+                <action android:name="com.want.vmc.TAKE_STOCK"></action>
+                <action android:name="com.want.vmc.STOCK_SYNC"></action>
+                <action android:name="com.want.vmc.SUPPLY_GET_STOCK"></action>
+                <action android:name="com.want.vmc.GET_FACTORY_CODE"></action>
+                <action android:name="com.want.vmc.SUPPLY_EXIT"></action>
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>

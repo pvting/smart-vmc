@@ -1,0 +1,40 @@
+<manifest package="com.want.vmc"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.Fullscreen"
+        tools:replace="android:theme">
+
+        <!-- 程序入口 -->
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="keyboardHidden|navigation|orientation"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.HOME" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="vmc.vendor.ACTION_MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+
+
+        <!-- 登陆页面 -->
+        <activity android:name="com.want.vmc.LoginActivity"
+            android:windowSoftInputMode="adjustPan|stateAlwaysHidden" />
+        <!-- 购物引导界面 -->
+        <activity android:name="com.want.vmc.guide.ShoppingGuideActivity" />
+        <!-- 串口异常 -->
+        <activity android:name="com.want.vmc.serialporterror.SerialPortErrorActivity" />
+
+    </application>
+
+</manifest>

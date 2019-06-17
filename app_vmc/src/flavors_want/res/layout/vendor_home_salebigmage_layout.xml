@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.want.vendor.product.list.sales.SaleBigmageViewModel" />
+    </data>
+
+
+    <ImageView
+        android:id="@+id/vendor_salebigmage_img"
+        android:background="@drawable/vendor_home_bigads_popup_frame"
+        app:image_url="@{model.imageUrl}"
+        app:image_loading="@{model.imageLoading}"
+        app:image_error="@{model.imageError}"
+        android:scaleType="centerCrop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</layout>

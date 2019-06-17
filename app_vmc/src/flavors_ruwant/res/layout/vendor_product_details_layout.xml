@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="model"
+            type="com.want.vmc.product.info.details.ProductDetailsViewModel" />
+
+    </data>
+
+    <!--
+    ~
+    ~ 
+    ~
+    -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/dp20">
+
+        <TextView
+            android:id="@+id/product_details_name_text"
+            style="@style/Vendor.Text"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="@dimen/dp20"
+            android:text="@{model.name}"
+            tools:text="可口可乐" />
+
+        <TextView
+            style="@style/Vendor.Text"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/dp20"
+            android:text="@{model.getPriceYuan}"
+            tools:text="¥ 25.00" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/product_details_name_text"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/vendor_product_background"
+            app:image_url="@{model.imageUrl}"
+            tools:src="@drawable/default_image" />
+
+    </RelativeLayout>
+</layout>

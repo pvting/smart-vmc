@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme.Fullscreen">
+        <item name="android:windowBackground">@drawable/vendor_window_background</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="base_background">@null</item>
+        <item name="android:windowEnableSplitTouch">false</item>
+        <item name="android:splitMotionEvents">false</item>
+        <item name="android:listDivider">@drawable/supply_list_divider</item>
+
+        <!-- window animaiton-->
+        <item name="android:windowAnimationStyle">@null</item>
+    </style>
+
+    <style name="xSupplyAppTheme" parent="SDKTheme.NoActionBar">
+        <item name="android:listDivider">@drawable/supply_list_divider</item>
+    </style>
+    <style name="Vendor.Frame.Translucent">
+        <item name="android:background">@color/translucent</item>
+        <item name="android:padding">0dp</item>
+    </style>
+</resources>

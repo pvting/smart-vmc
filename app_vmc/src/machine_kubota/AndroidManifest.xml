@@ -1,0 +1,21 @@
+<manifest package="com.want.vmc"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:name="com.want.vmc.KubotaApplication"
+        tools:replace="android:name">
+
+
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="4415a2db8b3434c7e0a2154576305917"
+            tools:replace="android:value" />
+
+    </application>
+
+
+
+
+
+</manifest>

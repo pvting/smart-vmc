@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.want.vendor.deliver.fillout.FillOutViewModel" />
+    </data>
+
+    <android.support.v7.widget.GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/vendor_deliver_order_keyboard"
+        app:alignmentMode="alignMargins"
+        app:rowCount="4"
+        app:columnCount="3" >
+    <TextView
+        android:textSize="30dp"
+        android:id="@+id/vendor_input_1"
+        android:onClick="@{model.onClick}"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_rowWeight="1"
+        app:layout_columnWeight="1"
+        android:gravity="center"
+        android:text="1" />
+
+    <TextView
+        style="@style/Vendor.Text.Deliver.Input"
+        android:id="@+id/vendor_input_2"
+        android:textSize="30dp"
+        android:onClick="@{model.onClick}"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_rowWeight="1"
+        app:layout_columnWeight="1"
+        android:gravity="center"
+        android:text=" 2" />
+    <TextView
+        style="@style/Vendor.Text.Deliver.Input"
+        android:textSize="30dp"
+        android:id="@+id/vendor_input_3"
+        android:onClick="@{model.onClick}"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_rowWeight="1"
+        app:layout_columnWeight="1"
+        android:gravity="center"
+        android:text="3" />
+
+
+    <TextView
+        android:textSize="30dp"
+        android:id="@+id/vendor_input_4"
+        android:onClick="@{model.onClick}"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_rowWeight="1"
+        app:layout_columnWeight="1"
+        android:gravity="center"
+        android:text="4" />
+
+    <TextView
+        style="@style/Vendor.Text.Deliver.Input"
+        android:textSize="30dp"
+        android:id="@+id/vendor_input_5"
+        android:onClick="@{model.onClick}"
+        app:layout_rowWeight="1"
+        app:layout_columnWeight="1"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" 5" />
+    <TextView
+        style="@style/Vendor.Text.Deliver.Input"
+        android:textSize="30dp"
+        android:id="@+id/vendor_input_6"
+        android:onClick="@{model.onClick}"
+        app:layout_rowWeight="1"
+        app:layout_columnWeight="1"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="6" />
+
+
+    <TextView
+        android:textSize="30dp"
+        android:id="@+id/vendor_input_7"
+        android:onClick="@{model.onClick}"
+        app:layout_rowWeight="1"
+        app:layout_columnWeight="1"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="7" />
+
+    <TextView
+        style="@style/Vendor.Text.Deliver.Input"
+        android:textSize="30dp"
+        android:id="@+id/vendor_input_8"
+        android:onClick="@{model.onClick}"
+        app:layout_rowWeight="1"
+        app:layout_columnWeight="1"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" 8" />
+    <TextView
+        style="@style/Vendor.Text.Deliver.Input"
+        android:textSize="30dp"
+        android:id="@+id/vendor_input_9"
+        android:onClick="@{model.onClick}"
+        app:layout_rowWeight="1"
+        app:layout_columnWeight="1"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="9" />
+
+    <TextView
+        android:textSize="30dp"
+        android:id="@+id/vendor_input_del"
+        android:onClick="@{model.onClick}"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_rowWeight="1"
+        app:layout_columnWeight="1"
+        android:gravity="center"
+        android:text="退格" />
+
+    <TextView
+        style="@style/Vendor.Text.Deliver.Input"
+        android:textSize="30dp"
+        android:id="@+id/vendor_input_0"
+        android:onClick="@{model.onClick}"
+        app:layout_rowWeight="1"
+        app:layout_columnWeight="1"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" 0" />
+        <TextView
+            style="@style/Vendor.Text.Deliver.Input"
+            android:textSize="30dp"
+            android:id="@+id/vendor_input_x"
+            android:onClick="@{model.onClick}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_rowWeight="1"
+            app:layout_columnWeight="1"
+            android:gravity="center"
+            android:text="X" />
+
+    </android.support.v7.widget.GridLayout>
+</layout>
+

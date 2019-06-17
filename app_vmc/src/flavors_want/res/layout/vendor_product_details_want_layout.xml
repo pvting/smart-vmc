@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="model"
+            type="com.want.vendor.product.info.details.DetailsViewModel"/>
+    </data>
+
+    <!--
+    ~
+    ~
+    ~
+    -->
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/product_details_segment_one"
+            android:layout_height="@dimen/dp1"
+            android:layout_centerHorizontal="true"
+            android:background="@color/white"
+            app:layout_marginTopPercent="76.6%"
+            app:layout_widthPercent="93.8%"/>
+
+        <TextView
+            android:id="@+id/product_details_name_text"
+            style="@style/Vendor.Text.LargePlus"
+            android:ellipsize="end"
+            android:gravity="bottom"
+            android:maxEms="11"
+            android:singleLine="true"
+            android:text="@{model.name}"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_marginLeftPercent="4.4%"
+            app:layout_marginTopPercent="79.4%"
+            tools:text="可口可乐"/>
+
+        <TextView
+            android:id="@+id/product_details_weight_text"
+            style="@style/Vendor.Text"
+            android:layout_alignBaseline="@id/product_details_name_text"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_toRightOf="@id/product_details_name_text"
+            android:gravity="bottom"
+            android:text="@{model.netWeight}"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            tools:text="20ml"/>
+
+        <TextView
+            android:id="@+id/product_details_campaign_text"
+            style="@style/Vendor.Text.Normal"
+            android:text="@{model.compaign}"
+            android:textColor="@color/white"
+            android:visibility="@{model.promotionVisible}"
+            app:layout_marginLeftPercent="4.4%"
+            app:layout_marginTopPercent="90.7%"
+            tools:text="活动: 购买旺仔牛奶 理想 买一赠一\n此商品参与游戏活动，赢取更多奖品"/>
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/product_details_campaign_text"
+            android:src="@drawable/vendor_product_add_over_want"
+            android:visibility="@{model.promotionAdd}"
+            app:layout_marginTopPercent="90%"/>
+
+        <TextView
+            android:id="@+id/product_details_price_text"
+            style="@style/Vendor.Text.LargePlus"
+            android:layout_alignParentRight="true"
+            android:gravity="bottom"
+            android:text="@{model.priceYuan}"
+            android:textColor="@color/white"
+            app:layout_marginRightPercent="4.0%"
+            app:layout_marginTopPercent="90.2%"
+            tools:text="¥ 25.00"/>
+
+        <TextView
+            android:id="@+id/product_details_orderprice_text"
+            style="@style/Vendor.Text.Normal"
+            android:layout_alignBaseline="@id/product_details_price_text"
+            android:layout_marginRight="@dimen/dp12"
+            android:layout_toLeftOf="@id/product_details_price_text"
+            android:gravity="bottom"
+            android:text="@{model.olderPriceYuan}"
+            android:textColor="@color/white"
+            android:visibility="@{model.showOlderPrice}"
+            tools:text="¥ 25.00"/>
+
+        <View
+            android:id="@+id/product_details_segment_two"
+            android:layout_height="@dimen/dp1"
+            android:layout_centerHorizontal="true"
+            android:background="@color/white"
+            app:layout_marginTopPercent="99.3%"
+            app:layout_widthPercent="93.8%"/>
+
+        <ImageView
+            android:id="@+id/product_details_image"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            app:image_url="@{model.imageUrl}"
+            app:layout_heightPercent="73.6%"
+            app:layout_widthPercent="100%"/>
+
+    </android.support.percent.PercentRelativeLayout>
+</layout>

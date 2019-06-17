@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--
+    ~
+    ~应用程序主题配置
+    ~
+    -->
+
+    <!-- App基本Theme-->
+    <style name="AppTheme" parent="SDKTheme.NoActionBar">
+
+    </style>
+
+    <style name="Theme.Test" parent="@android:style/Theme.Black.NoTitleBar.Fullscreen"/>
+
+</resources>

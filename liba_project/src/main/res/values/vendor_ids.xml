@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+    ~
+    ~ 售卖APP id值预定义
+    ~
+    -->
+
+    <!-- 通用 -->
+    <item name="vendor_back"
+          type="id" />
+
+    <item name="vendor_help"
+        type="id" />
+    <!-- 信息展示 -->
+    <item name="home_info" type="id" />
+    <!-- 购物引导信息展示 -->
+    <item name="guide_info" type="id" />
+    <!-- 视频广告推广 -->
+    <item name="home_advert_video"
+          type="id" />
+    <!-- 图片广告推广 -->
+    <item name="home_advert_image"
+          type="id" />
+    <!-- 购物引导 -->
+    <item name="home_guide" type="id" />
+    <!-- 购物入口 -->
+    <item name="home_shopping" type="id" />
+    <!-- 购物引导入口 -->
+    <item name="home_shopping_guide" type="id" />
+    <!-- 提货区 -->
+    <item name="home_surprise" type="id" />
+
+    <!-- 广告中的视频 -->
+    <item name="advert_video" type="id"/>
+
+    <!-- 问题求助 -->
+    <item name="home_hint_problem" type="id"/>
+    <!-- 错误提示扫码返回 -->
+    <item name="vendor_guide_problem_code" type="id"/>
+    <!-- 请先取出现金 -->
+    <item name="shopping_problem_money" type="id"/>
+
+    <!-- 以下是商品列表 -->
+    <!-- 商品分类 -->
+    <item name="product_list_tabs" type="id"/>
+    <item name="product_list_content" type="id"/>
+    <item name="product_attr_text" type="id"/>
+    <item name="product_price_text" type="id"/>
+    <item name="product_name_text" type="id"/>
+    <item name="product_list_pager" type="id"/>
+    <item name="product_list_controlToggleView" type="id"/>
+    <item name="product_list_categroy" type="id"/>
+    <item name="product_list_title" type="id"/>
+    <item name="product_list_page" type="id"/>
+
+
+
+    <!-- 以下是商品信息 -->
+    <item name="product_info_details"
+          type="id" />
+    <item name="product_info_payment"
+          type="id" />
+    <item name="product_info_scanner"
+          type="id" />
+
+    <!-- 以下是支付方式 -->
+    <item name="payment_alipay" type="id" />
+    <item name="payment_wechat" type="id" />
+    <item name="payment_cash" type="id" />
+    <item name="payment_wangbi" type="id" />
+    <!-- 以下支付方式重选 -->
+    <item name="product_rechoose_payment" type="id" />
+
+
+</resources>

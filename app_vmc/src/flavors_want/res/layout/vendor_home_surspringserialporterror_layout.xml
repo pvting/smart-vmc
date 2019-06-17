@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+
+        <variable
+            name="model"
+            type="com.want.vendor.tips.surprisingserialport.SurprisingErrorPortViewModel" />
+    </data>
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/vendor_guide_problem_img_center"
+        android:background="@drawable/vendor_serialporterror_bg"
+        app:layout_heightPercent="52.33%"
+        app:layout_marginLeftPercent="18.75%"
+        app:layout_marginTopPercent="19.39%"
+        app:layout_widthPercent="64.5%"/>
+
+
+    <TextView
+        app:layout_marginTopPercent="22.07%"
+        app:layout_marginLeftPercent="38.22%"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/vendor_guide_problem_name_tv"
+        android:text="@string/vendor_home_problem_serialporterror"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_36" />
+
+
+    <TextView
+        app:layout_marginTopPercent="28.98%"
+        app:layout_widthPercent="26.11%"
+        app:layout_heightPercent="20.8%"
+        app:layout_marginLeftPercent="36.94%"
+        android:id="@+id/vendor_guide_problem_img_code"
+        android:background="@drawable/vendor_surspringserialporterror_icon" />
+
+    <TextView
+        app:layout_marginTopPercent="57.43%"
+        app:layout_marginLeftPercent="22.55%"
+        app:layout_widthPercent="58.05%"
+        android:id="@+id/vendor_guide_problem_tel_tv"
+        android:layout_height="wrap_content"
+        android:text="@string/vendor_home_surspringserialporterror_num_tv"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_26" />
+
+    <TextView
+        app:layout_marginTopPercent="65.58%"
+        app:layout_marginLeftPercent="31.55%"
+        app:layout_widthPercent="58.05%"
+        android:id="@+id/vendor_guide_problem_num"
+        android:layout_height="wrap_content"
+        android:text="@{model.configNum}"
+        tools:text="@string/vendor_home_serialporterror_num"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_21" />
+
+    </android.support.percent.PercentRelativeLayout>
+</layout>

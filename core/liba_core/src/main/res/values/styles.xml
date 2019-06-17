@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+    ~
+    ~ App通用样式
+    ~
+    -->
+
+
+    <!-- 控件基本样式-->
+    <style name="App" parent="SDK">
+
+    </style>
+
+    <!-- TextView基本样式-->
+    <style name="App.Text" parent="SDK.Textview" />
+
+    <!-- TextView基本样式-小 -->
+    <style name="App.Text.Small">
+        <item name="android:textSize">@dimen/text_size_12</item>
+    </style>
+
+
+</resources>

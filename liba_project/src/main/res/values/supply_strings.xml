@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--
+    ~
+    ~ 补货相关通用文案资源
+    ~
+    -->
+
+    <string name="supply_title">补货</string>
+
+    <string name="supply_pick_title">提货</string>
+    <string name="supply_full">补满</string>
+</resources>

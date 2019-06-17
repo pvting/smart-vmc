@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.want.vmc.product.info.payment.PaymentViewModel" />
+    </data>
+
+    <!--
+    ~
+    ~ 
+    ~
+    -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.percent.PercentRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/vendor_payment_alipay"
+                android:background="@{model.getAliPay(context)}"
+                android:clickable="@{model.clickableAlipay}"
+                android:onClick="@{model.onChangePayment}"
+                app:layout_heightPercent="43.2%"
+                app:layout_marginLeftPercent="3.1%"
+                app:layout_widthPercent="49.1%"
+                tools:background="@drawable/vendor_payment_alipay_normal" />
+
+            <TextView
+                android:id="@+id/vendor_alipay_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="支付宝付款"
+                android:textColor="@color/text_color_deep_black"
+                android:textSize="@dimen/text_size_22"
+                app:layout_marginLeftPercent="20%"
+                app:layout_marginTopPercent="12%" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/vendor_alipay_tv"
+                android:text="打开支付宝扫描"
+                android:textColor="@color/text_color_black"
+                android:textSize="@dimen/text_size_14"
+                app:layout_marginLeftPercent="20%" />
+
+            <ImageView
+                android:id="@+id/vendor_payment_wechat"
+                android:background="@{model.getWechatPay(context)}"
+                android:clickable="@{model.clickableWechatpay}"
+                android:onClick="@{model.onChangePayment}"
+                app:layout_heightPercent="43.2%"
+                app:layout_marginLeftPercent="50%"
+                app:layout_widthPercent="49.1%"
+                tools:background="@drawable/vendor_payment_wechat_normal" />
+
+            <TextView
+                android:id="@+id/vendor_wechat_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="微信付款"
+                android:textColor="@color/text_color_deep_black"
+                android:textSize="@dimen/text_size_22"
+                app:layout_marginLeftPercent="67%"
+                app:layout_marginTopPercent="12%" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/vendor_wechat_tv"
+                android:text="打开微信扫描"
+                android:textColor="@color/text_color_black"
+                android:textSize="@dimen/text_size_14"
+                app:layout_marginLeftPercent="67%" />
+
+            <ImageView
+                android:id="@+id/vendor_payment_cash"
+                android:background="@{model.getCashPay(context)}"
+                android:clickable="@{model.clickableCashpay}"
+                android:onClick="@{model.onChangePayment}"
+                app:layout_heightPercent="43.2%"
+                app:layout_marginLeftPercent="3.1%"
+                app:layout_marginTopPercent="48%"
+                app:layout_widthPercent="49.1%"
+                tools:background="@drawable/vendor_payment_cash_normal" />
+
+            <TextView
+                android:id="@+id/vendor_cash_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="现金支付"
+                android:textColor="@color/text_color_deep_black"
+                android:textSize="@dimen/text_size_22"
+                app:layout_marginLeftPercent="20%"
+                app:layout_marginTopPercent="60%" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/vendor_cash_tv"
+                android:text="5角、1元、5元、10元"
+                android:textColor="@color/text_color_black"
+                android:textSize="@dimen/text_size_14"
+                app:layout_marginLeftPercent="20%" />
+
+            <ImageView
+                android:id="@+id/vendor_payment_wangbi"
+                android:background="@{model.getWangbiPay(context)}"
+                android:clickable="@{model.clickableWangbipay}"
+                android:onClick="@{model.onChangePayment}"
+                app:layout_heightPercent="43.2%"
+                app:layout_marginLeftPercent="50%"
+                app:layout_marginTopPercent="48%"
+                app:layout_widthPercent="49.1%"
+                tools:background="@drawable/vendor_payment_wangbi_normal" />
+
+            <TextView
+                android:id="@+id/vendor_wangbi_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="旺币支付"
+                android:textColor="@color/text_color_deep_black"
+                android:textSize="@dimen/text_size_22"
+                app:layout_marginLeftPercent="67%"
+                app:layout_marginTopPercent="60%" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/vendor_wangbi_tv"
+                android:text="关注微信公众号扫码"
+                android:textColor="@color/text_color_black"
+                android:textSize="@dimen/text_size_14"
+                app:layout_marginLeftPercent="67%" />
+
+        </android.support.percent.PercentRelativeLayout>
+    </FrameLayout>
+</layout>

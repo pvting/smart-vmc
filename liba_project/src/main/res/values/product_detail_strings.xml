@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="product_payment_description">%1$s\n%2$s</string>
+
+    <string name="product_payment_rechoose">重新选择支付方式</string>
+    <string name="product_payment_deal_tip_1">请先取出现金</string>
+    <string name="product_payment_deal_tip_2">您已投币/投钞，如选择其它方式付款\n请先按下退币杆，退出现金</string>
+</resources>

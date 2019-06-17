@@ -1,0 +1,12 @@
+[submodule "dependencies"]
+	path = dependencies
+	url =  http://git.hollywant.com/Android/dependencies.git
+[submodule "library/liba_core_framework"]
+	path = library/liba_core_framework
+	url = http://git.hollywant.com/Android/liba_core_framework.git
+[submodule "library/liba_module_location"]
+	path = library/liba_module_location
+	url =  http://git.hollywant.com/Android/liba_module_location.git
+[submodule "library/liba_odoo"]
+	path = library/liba_odoo
+	url =  http://git.hollywant.com/Android/liba_odoo_core.git

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+    ~
+    ~ 
+    ~
+    -->
+    <!-- home页面 -->
+    <string name="home_surprise">提货码购买</string>
+    <string name="home_shopping_guide">操作说明</string>
+    <string name="home_shopping">点击购买</string>
+    <string name="home_date_format">&#160;  &#160;  &#160; MM月dd日</string>
+    <string name="home_time_format">HH:mm</string>
+    <string name="home_machine_id">机器号：</string>
+    <string name="home_hottel_id">客服电话：</string>
+    <string name="home_week_1">星期一</string>
+    <string name="home_week_2">星期二</string>
+    <string name="home_week_3">星期三</string>
+    <string name="home_week_4">星期四</string>
+    <string name="home_week_5">星期五</string>
+    <string name="home_week_6">星期六</string>
+    <string name="home_week_7">星期日</string>
+
+
+
+</resources>

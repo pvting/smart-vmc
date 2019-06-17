@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <com.pili.pldroid.player.widget.PLVideoView
+        android:id="@+id/movie_player"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/dp10"
+        app:layout_heightPercent="37%"
+        app:layout_widthPercent="100%" />
+
+    <!--<FrameLayout-->
+    <!--android:id="@+id/image_advert_view"-->
+    <!--android:layout_below="@+id/movie_player"-->
+    <!--android:layout_marginBottom="10dp"-->
+    <!--android:layout_marginLeft="10dp"-->
+    <!--android:layout_marginRight="10dp"-->
+    <!--android:gravity="center"-->
+    <!--app:layout_heightPercent="23%"-->
+    <!--app:layout_widthPercent="100%" />-->
+    <!--
+        <vmc.project.ui.view.IndicatorView
+            android:id="@+id/image_advert_view"
+            android:layout_below="@+id/movie_player"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            app:banner_indicatorGravity="bottom|center_horizontal"
+            app:banner_isNeedShowIndicatorOnOnlyOnePage="true"
+            app:banner_placeholderDrawable="@drawable/default_image"
+            app:banner_pointAutoPlayAble="true"
+            app:banner_pointAutoPlayInterval="3000"
+            app:layout_heightPercent="23%"
+            app:layout_widthPercent="100%" />
+    -->
+    <vmc.project.ui.view.PhotoCarouselView
+        android:id="@+id/image_advert_view"
+        android:layout_below="@+id/movie_player"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center"
+        app:layout_heightPercent="23%"
+        app:layout_widthPercent="100%" />
+
+    <FrameLayout
+        android:id="@+id/select_channel_img"
+        android:layout_alignLeft="@+id/image_advert_view"
+        android:layout_below="@+id/image_advert_view"
+        android:background="@drawable/base_background_with_radius_20dp"
+        app:layout_heightPercent="15%"
+        app:layout_widthPercent="36%">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawablePadding="@dimen/dp10"
+            android:drawableTop="@drawable/icon_select_channel"
+            android:text="选择货道"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_20" />
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:id="@+id/home_test_btn"
+        android:layout_alignLeft="@+id/select_channel_img"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/select_channel_img"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/home_shopflow_background"
+        app:layout_heightPercent="7%">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawablePadding="2dp"
+            android:drawableTop="@drawable/home_icon_shop_flow"
+            android:text="购物流程"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_20" />
+    </FrameLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/product_list_btn"
+        android:layout_above="@+id/home_test_btn"
+        android:layout_alignLeft="@+id/select_channel_img"
+        android:layout_alignRight="@+id/select_channel_img"
+        android:layout_below="@+id/select_channel_img"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/home_product_background">
+
+        <ImageView
+            android:id="@+id/product_list_icon_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/home_product_background_breath" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/home_icon_product_list" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/product_list_icon_image"
+            android:layout_alignRight="@+id/product_list_icon_image"
+            android:layout_below="@+id/product_list_icon_image"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="商品列表"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_20" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/home_weather_layout"
+        android:layout_alignRight="@+id/image_advert_view"
+        android:layout_alignTop="@+id/select_channel_img"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/select_channel_img"
+        android:background="@drawable/weather_bg"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:layout_heightPercent="11%">
+
+        <ImageView
+            android:id="@+id/location1"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/location" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp5"
+            android:layout_toRightOf="@id/location1"
+            android:text="上海"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dp18" />
+
+        <ImageView
+            android:id="@+id/weathericon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/location1"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/rain" />
+
+        <TextView
+            android:id="@+id/tv_weather"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/location1"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="30dp"
+            android:layout_toRightOf="@id/weathericon"
+            android:text="多云"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dp16" />
+
+        <TextView
+            android:id="@+id/tv_temperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_weather"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/weathericon"
+            android:text="27℃"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dp20" />
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/dp8"
+            android:text="星期日 7月24日"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dp16" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/tv_date"
+            android:text="10:00 AM"
+            android:textColor="@color/white"
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/msgs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_12" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_12" />
+    </RelativeLayout>
+
+
+    <ImageView
+        android:id="@+id/hotclub_layout"
+        android:layout_alignBottom="@+id/home_test_btn"
+        android:layout_alignLeft="@+id/home_weather_layout"
+        android:layout_alignRight="@+id/image_advert_view"
+        android:layout_below="@+id/home_weather_layout"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/hotclub_bg"
+        android:orientation="vertical" />
+
+
+</android.support.percent.PercentRelativeLayout>

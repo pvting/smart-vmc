@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/vendor_guide_hint_background"
+        >
+        <ImageView
+            android:id="@+id/vendor_guide_problem_img_bg"
+            app:layout_marginLeftPercent="7.03%"
+            app:layout_marginRightPercent="7.03%"
+            app:layout_widthPercent="85.93%"
+            app:layout_heightPercent="73.2%"
+            app:layout_marginTopPercent="13.9%"
+            android:background="@drawable/vendor_guide_hint_bg"/>
+        <ImageView
+            android:id="@+id/vendor_guide_problem_img_center"
+            app:layout_marginLeftPercent="18.75%"
+            app:layout_marginRightPercent="18.75%"
+            app:layout_widthPercent="62.5%"
+            app:layout_heightPercent="40.26%"
+            app:layout_marginTopPercent="26.06%"
+            android:background="@drawable/vendor_guide_hint_center"/>
+
+        <TextView
+            android:id="@+id/vendor_guide_problem_name_tv"
+            app:layout_marginLeftPercent="38.28%"
+            app:layout_marginRightPercent="38.28%"
+            app:layout_widthPercent="23.43%"
+            app:layout_heightPercent="2.63%"
+            app:layout_marginTopPercent="28.47%"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_14"
+            tools:text="@string/vendor_guide_problem_name_tv" />
+        <TextView
+            android:id="@+id/vendor_guide_problem_content_tv"
+            app:layout_marginLeftPercent="43.48%"
+            app:layout_widthPercent="13.02%"
+            app:layout_heightPercent="2.04%"
+            app:layout_marginTopPercent="34.04%"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_8"
+            tools:text="@string/vendor_guide_problem_code_tv" />
+        <TextView
+            android:id="@+id/vendor_guide_problem_service_tv"
+            app:layout_marginLeftPercent="41.79%"
+            app:layout_marginRightPercent="41.79%"
+            app:layout_widthPercent="16.4%"
+            app:layout_heightPercent="1.46%"
+            app:layout_marginTopPercent="36.09%"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_6"
+            tools:text="@string/vendor_guide_problem_service_tv" />
+        <ImageView
+            android:id="@+id/vendor_guide_problem_img_code"
+            app:layout_marginLeftPercent="33.07%"
+            app:layout_marginRightPercent="33.07%"
+            app:layout_widthPercent="33.85%"
+            app:layout_heightPercent="19.1%"
+            app:layout_marginTopPercent="39.01%"
+            android:background="@drawable/vendor_guide_problem_code"/>
+        <TextView
+            android:id="@+id/vendor_guide_problem_tel_tv"
+            app:layout_marginLeftPercent="46.48%"
+            app:layout_widthPercent="7.03%"
+            app:layout_heightPercent="1.83%"
+            app:layout_marginTopPercent="61.49%"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_8"
+            tools:text="@string/vendor_guide_problem_tel_tv" />
+        <TextView
+            android:id="@+id/vendor_guide_problem_num_tv"
+            app:layout_marginLeftPercent="40.49%"
+            app:layout_widthPercent="19.01%"
+            app:layout_heightPercent="2.04%"
+            app:layout_marginTopPercent="63.25%"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_10"
+            tools:text="@string/vendor_guide_problem_num_tv" />
+        <ImageView
+            android:id="@+id/vendor_guide_problem_img_back"
+            app:layout_marginLeftPercent="33.07%"
+            app:layout_marginRightPercent="33.07%"
+            app:layout_widthPercent="33.85%"
+            app:layout_heightPercent="7.32%"
+            app:layout_marginTopPercent="73.42%"
+            android:background="@drawable/vendor_guide_hint_back"/>
+        <TextView
+            android:id="@+id/vendor_guide_problem_tv_back"
+            app:layout_marginLeftPercent="36.97%"
+            app:layout_marginRightPercent="36.97%"
+            app:layout_widthPercent="26.17%"
+            app:layout_heightPercent="3.66%"
+            app:layout_marginTopPercent="75.25%"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_16"
+            tools:text="关闭 （59）" />
+    </android.support.percent.PercentRelativeLayout>
+</layout>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_choose_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_black_1"
+    tools:context="vmc.project.replenishment.activity.ChooseContainerDeprecatedActivity">
+    <!--头部布局-->
+    <android.support.percent.PercentRelativeLayout
+        android:id="@+id/container_header_relativelayout"
+        android:layout_width="match_parent"
+        android:background="@drawable/icon_choose_container_header"
+        android:visibility="gone"
+        app:layout_heightPercent="13%">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="vertical"
+            app:layout_marginLeftPercent="7%">
+
+            <TextView
+                style="@style/App.Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="补货"
+                android:textColor="@color/base_black_1"
+                android:textSize="18sp" />
+
+            <TextView
+                style="@style/App.Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="请先选择货柜及货道"
+                android:textColor="@color/base_black_1"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </android.support.percent.PercentRelativeLayout>
+
+    <android.support.percent.PercentRelativeLayout
+        android:id="@+id/container_header"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        app:layout_heightPercent="8%">
+
+        <TextView
+            android:id="@+id/container_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="补货机名称"
+            android:textColor="@color/base_black_6"
+            android:textSize="@dimen/dp20" />
+
+        <TextView
+            android:id="@+id/container_title_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:text="盘点"
+            android:textColor="@color/base_black_6"
+            android:textSize="@dimen/dp20" />
+
+        <TextView
+            android:id="@+id/container_title_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:text="返回"
+            android:textColor="@color/base_black_6"
+            android:textSize="@dimen/dp20" />
+
+    </android.support.percent.PercentRelativeLayout>
+    <!--左侧栏选择布局-->
+    <!--右侧显示列表布局-->
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/container_header"
+        android:orientation="vertical"
+        app:layout_heightPercent="92%"
+        app:layout_widthPercent="20%">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:gravity="center|center_vertical"
+            android:orientation="vertical"
+            android:paddingTop="10dp"
+            app:layout_heightPercent="25%"
+            app:layout_widthPercent="100%">
+
+            <TextView
+                android:id="@+id/container_supply_coin_text"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_tv_take_money"
+                android:gravity="center"
+                android:text="补硬币"
+                android:textColor="@color/base_black_1"
+                android:visibility="gone"
+                android:textSize="@dimen/dp20" />
+
+            <TextView
+                android:id="@+id/container_take_cash_text"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:visibility="gone"
+                android:background="@drawable/bg_tv_take_money"
+                android:gravity="center"
+                android:text="提取现金"
+                android:textColor="@color/base_black_1"
+                android:textSize="@dimen/dp20" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/replenishment_container_listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:listSelector="@drawable/listview_checked_selector"
+            app:layout_heightPercent="75%" />
+    </android.support.percent.PercentRelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/container_framelayout"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/container_header"
+        android:background="@drawable/base_border_left_shape_black"
+        app:layout_heightPercent="92%"
+        app:layout_widthPercent="80%" />
+</android.support.percent.PercentRelativeLayout>

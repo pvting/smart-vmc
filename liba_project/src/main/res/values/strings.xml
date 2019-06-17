@@ -1,0 +1,32 @@
+<resources>
+    <string name="odoo_db">vmc</string>
+    <string name="odoo_unam">admin</string>
+    <string name="odoo_pswd">admin1234</string>
+    <!-- 机器唯一编码 -->
+    <string name="factory_code">1234567</string>
+
+    <string name="weather_url">https://api.caiyunapp.com/v2/IoIJ6N-f3QrXhhlG/121.48,31.22/realtime.json
+    </string>
+
+    <string name="game_findwz">http://dev.hotkidclub.com/hotkidwhere/main.html</string>
+    <string name="game_throwdart">http://dev.hotkidclub.com/game/turntable/index.html?v=2.0</string>
+    <string name="buystep">购物流程</string>
+    <string name="replace_goods_warning">请将货道清空\n按照提示更换货品</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="onekeyfillgoods">一键补满</string>
+    <string name="fillgoodscomplete">确认补货完成</string>
+    <string name="replenishment_finish">补货已经完成</string>
+
+
+    <string name="permission_read_state_desc">允许其他程序获取VMC状态信息</string>
+    <string name="permission_read_state_label">VMC状态获取</string>
+    <string name="force_cash">已投币后只支持现金</string>
+
+    <string name="vendor_login_title">请登录账号</string>
+    <string name="vendor_login_username">请输入账号</string>
+    <string name="vendor_login_password">请输入密码</string>
+    <string name="vendor_login_commit">登 录</string>
+    <string name="vendor_login_reset">重 置</string>
+    <string name="log_level">ALL</string>
+</resources>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    style="@style/Vendor.Frame.BG"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="54dp"
+        android:background="@drawable/vendor_product_background"
+        android:layout_marginRight="54dp"
+        android:paddingLeft="@dimen/dp40"
+        android:paddingRight="@dimen/dp40"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/vendor_login_title"
+            style="@style/Vendor.Text.LargeNor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp20"
+            android:layout_centerHorizontal="true"
+            android:text="@string/vendor_login_title"/>
+
+        <EditText
+            android:id="@+id/vendor_login_username"
+            android:layout_below="@+id/vendor_login_title"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="@dimen/dp20"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginRight="@dimen/dp20"
+            android:layout_centerHorizontal="true"
+            android:imeOptions="actionNext"
+            android:nextFocusForward="@+id/vendor_login_password"
+            style="@style/Vendor.Text"
+            android:singleLine="true"
+            android:hint="@string/vendor_login_username"/>
+
+        <EditText
+            android:id="@+id/vendor_login_password"
+            android:layout_below="@+id/vendor_login_username"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="@dimen/dp20"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginRight="@dimen/dp20"
+            android:layout_centerHorizontal="true"
+            android:imeOptions="actionDone"
+            android:nextFocusForward="@+id/vendor_login_commit"
+            style="@style/Vendor.Text"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:hint="@string/vendor_login_password"/>
+        <TextView
+            android:id="@+id/vendor_login_promt"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/vendor_login_password"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_centerHorizontal="true"
+            style="@style/App.Text"
+            android:singleLine="true"
+            />
+
+        <LinearLayout
+            android:layout_below="@+id/vendor_login_promt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/vendor_login_commit"
+                style="@style/Vendor.Text.LargeNor"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:layout_marginBottom="@dimen/dp20"
+                android:layout_marginTop="@dimen/dp20"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:background="@drawable/vendor_payment_button"
+                android:onClick="onClickLogin"
+                android:text="@string/vendor_login_commit"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/vendor_login_reset"
+                style="@style/Vendor.Text.LargeNor"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:layout_marginBottom="@dimen/dp20"
+                android:layout_marginLeft="@dimen/dp40"
+                android:layout_marginTop="@dimen/dp20"
+                android:layout_weight="1"
+                android:background="@drawable/vendor_payment_button"
+                android:onClick="onClickReset"
+                android:text="@string/vendor_login_reset"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>

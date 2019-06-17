@@ -1,0 +1,9 @@
+<resources>
+
+    <!--
+    ~
+    ~ 所有产品类型通用的资源
+    ~
+    -->
+    <string name="app_name">智能售货机</string>
+</resources>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+
+    <android.support.percent.PercentRelativeLayout
+        style="@style/Vendor.Frame.Translucent">
+
+
+
+
+        <!-- 返回按钮-->
+
+        <FrameLayout
+            android:id="@id/vendor_back"
+            android:layout_alignParentBottom="true"
+            app:layout_heightPercent="8%"
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="true" />
+
+
+        <FrameLayout
+            android:id="@+id/home_bigimageads"
+            app:layout_heightPercent="91%"
+            app:layout_widthPercent="100%"
+            android:paddingLeft="@dimen/dp24"
+            android:paddingTop="@dimen/dp33"
+            android:paddingRight="@dimen/dp24"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+
+    </android.support.percent.PercentRelativeLayout>
+
+
+</layout>

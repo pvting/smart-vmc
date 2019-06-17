@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <!--
+    ~
+    ~ 商品列表横屏适配
+    ~
+    -->
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <!-- 返回 -->
+        <FrameLayout
+            android:id="@id/vendor_back"
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="10dp"
+            app:layout_heightPercent="9.5%"
+            tools:background="#FFFF00" />
+
+        <!-- 列表 -->
+        <FrameLayout
+            android:id="@id/product_list_content"
+            android:layout_width="match_parent"
+            android:layout_above="@+id/vendor_back"
+            android:layout_alignParentTop="true"
+            tools:background="#FF00FF" />
+
+
+    </android.support.percent.PercentRelativeLayout>
+</layout>

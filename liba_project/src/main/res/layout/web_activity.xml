@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <!--
+    ~
+    ~ 
+    ~
+    -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@id/content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <vmc.project.ui.view.CountDownView
+            android:id="@+id/web_countdownview"
+            android:layout_width="141dp"
+            android:layout_height="141dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="@dimen/large"
+            android:layout_marginRight="@dimen/large"
+            android:background="@drawable/web_return"
+            android:text="@string/web_back"
+            android:textColor="#F69C29"
+            android:textSize="22dp" />
+
+    </RelativeLayout>
+</layout>

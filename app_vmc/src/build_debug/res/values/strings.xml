@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+    ~
+    ~ 
+    ~
+    -->
+    <!-- 开发环境使用vmc2 --><!--
+    <string name="odoo_host">http://vmc2.hollywant.com:88</string>-->
+    <!--<string name="odoo_host">http://10.0.24.4:5004</string>-->
+    <string name="odoo_host">https://svmdemo02.hollywant.com</string>
+    <!--<string name="odoo_db">svm_test</string>-->
+    <string name="odoo_db">svm_release02</string>
+    <string name="odoo_unam">admin</string>
+    <string name="odoo_pswd">admin1234</string>
+    <string name="log_level">ALL</string>
+</resources>

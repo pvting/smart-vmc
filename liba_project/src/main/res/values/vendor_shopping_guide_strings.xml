@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+    ~
+    ~ 
+    ~
+    -->
+    <!-- 购买引导页面 -->
+    <string name="shoppingguide_step_1_title">Step 1</string>
+    <string name="shoppingguide_step_2_title">Step 2</string>
+    <string name="shoppingguide_step_3_title">Step 3</string>
+    <string name="shoppingguide_step_1_content">购买</string>
+    <string name="shoppingguide_step_2_content">选择商品并支付</string>
+    <string name="shoppingguide_step_3_content">完成支付</string>
+    <string name="shoppingguide_step_1_hint">点击购买\n选择商品</string>
+    <string name="shoppingguide_step_2_hint">选择对应支付方式完成付款，如果投入硬币后选择线上支付，请先将售货机内硬币退出</string>
+    <string name="shoppingguide_step_3_hint">完成付款后等待出货，如果付款失败请重新选择货品购买，由于信号问题可能会出现出货慢的情况，请耐心等待出货</string>
+
+</resources>

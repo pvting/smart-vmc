@@ -1,0 +1,12 @@
+<resources>
+
+    <!-- odoo服务器地址 -->
+    <string name="odoo_host">http://svmtest.hollywant.com:88</string>
+
+    <string name="odoo_http_error_auth">用户认证失败</string>
+    <string name="odoo_http_error_network">网络错误</string>
+    <string name="odoo_http_error_noconn">网络无连接</string>
+    <string name="odoo_http_error_server">服务内部错误</string>
+    <string name="odoo_http_error_timeout">连接超时</string>
+
+</resources>

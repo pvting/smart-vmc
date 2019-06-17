@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.want.vmc" xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application android:theme="@style/AppTheme.Fullscreen" tools:replace="android:theme">
+
+        <!-- 程序入口 -->
+        <activity android:name="com.want.vmc.MainActivity" tools:replace="andorid:name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.HOME" />
+            </intent-filter>
+        </activity>
+
+        <!-- 首页 -->
+        <activity android:name="com.want.vendor.home.HomeActivity" android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="vmc.vendor.ACTION_HOME" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- 提货码成功 -->
+        <activity android:name="com.want.vendor.deliver.SuccessActivity" android:launchMode="singleTask"
+            android:noHistory="true" />
+
+
+        <!-- 提货码失败 -->
+        <activity android:name="com.want.vendor.deliver.FaiActivity" android:launchMode="singleTask"
+            android:noHistory="true" />
+
+        <!-- 提货码主页面 -->
+        <activity android:name="com.want.vendor.deliver.DeliverActivity" android:launchMode="singleTask"
+            android:windowSoftInputMode="stateHidden" />
+
+        <!-- 图片广告大图 -->
+        <activity android:name="com.want.vendor.home.bigimgads.BigImgAdsActivity"
+            android:launchMode="singleTask" android:theme="@style/Transparent" />
+
+        <!-- 购物流程问题求助 -->
+        <activity android:name="com.want.vendor.tips.GuideProblemCodeActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true"
+            android:theme="@style/Transparent" />
+
+        <!-- 点返回时提示页面 -->
+        <activity android:name="com.want.vendor.home.guide.ShoppingGuideProblemActivity"
+            android:theme="@style/Transparent" />
+        <!-- 请取出现金 -->
+        <activity android:name="com.want.vendor.tips.ShoppingTakeMoneyActivity"
+            android:theme="@style/Transparent" />
+
+        <!-- 商品列表 -->
+        <activity android:name="com.want.vendor.product.list.ProductListActivity"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="vmc.vendor.ACTION_PRODUCTLIST" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- 移除默认的商品信息 -->
+        <activity android:name="com.want.vmc.product.info.ProductInfoActivity" tools:node="remove" />
+
+        <!-- 商品信息 -->
+        <activity android:name="com.want.vendor.product.info.ProductInfoActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/Transparent">
+            <intent-filter>
+                <action android:name="vmc.vendor.ACTION_PRODUCT_INFO" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- 购买成功页面 -->
+        <activity android:name="com.want.vendor.product.paysuccess.PaySuccessActivity"
+            android:launchMode="singleTask" android:noHistory="true">
+            <intent-filter>
+                <action android:name="vmc.vendor.ACTION_OUT_PRODUCT_RESULT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!--狠心离开 提示页面-->
+        <activity android:name="com.want.vendor.tips.TipsActivity" android:launchMode="singleTask"
+            android:theme="@style/Transparent" />
+        <!-- 购物引导页面 -->
+        <activity android:name="com.want.vendor.home.guide.ShoppingGuideActivity" />
+
+        <!--串口异常处理的页面-->
+        <activity android:name="com.want.vendor.common.seriporterror.SeriportErrorActivity">
+        <intent-filter>
+        <action android:name="vmc.vendor.ACTION_SERIPORT_ERROR" />
+            <category android:name="android.intent.category.DEFAULT" />
+        </intent-filter>
+        </activity>
+
+
+        <!--串口异常提货码页面处理的页面-->
+        <activity android:name="com.want.vendor.tips.surprisingserialport.SurprisingErrorPortActivity" />
+        <activity android:name="com.want.vendor.tips.serialporterror.SerialPortErrorActivity" />
+
+        <!--升级页面-->
+        <activity android:name="com.want.vendor.common.upgrade.UpgradeActivity"
+                  android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="vmc.vendor.ACTION_UPGRADE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+
+        <!--接受网络异常广播-->
+        <receiver android:name="com.want.vendor.product.info.BroadcastWifi">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+</manifest>

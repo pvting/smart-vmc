@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--
+    ~
+    ~ 
+    ~
+    -->
+
+    <android.support.percent.PercentRelativeLayout
+        style="@style/Vendor.Frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:src="@drawable/vendor_payment_successpay"
+            app:layout_widthPercent="19.7%"
+            app:layout_heightPercent="15.2%"
+            android:layout_centerHorizontal="true"
+            app:layout_marginTopPercent="4.3%"/>
+
+        <TextView
+            android:text="付款成功"
+            style="@style/Vendor.Text.LargeNor"
+            android:textColor="@color/white"
+            android:layout_centerHorizontal="true"
+            app:layout_marginTopPercent="21.7%" />
+
+        <TextView
+            android:text="等待出货"
+            style="@style/Vendor.Text.Normal"
+            android:textColor="@color/white"
+            android:layout_centerHorizontal="true"
+            app:layout_marginTopPercent="27.1%" />
+
+        <Button
+            app:layout_widthPercent="33.9%"
+            app:layout_heightPercent="7.3%"
+            app:layout_marginTopPercent="29.8%"
+            android:layout_centerHorizontal="true"
+            android:text="问题求助"
+            style="@style/Vendor.Text.LargeNor"
+            android:textColor="@color/white"
+            android:onClick="skipToHelp"
+            android:background="@drawable/vendor_payment_help_bg" />
+
+        <View
+            app:layout_widthPercent="24.9%"
+            android:layout_height="@dimen/dp1"
+            app:layout_marginLeftPercent="10.4%"
+            app:layout_marginTopPercent="40.0%"
+            android:background="@color/white"/>
+
+        <TextView
+            style="@style/Vendor.Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            app:layout_marginTopPercent="38.4%"
+            android:textColor="@color/white"
+            android:text="参与活动获得更多"/>
+
+        <View
+            app:layout_widthPercent="24.9%"
+            android:layout_height="@dimen/dp1"
+            app:layout_marginLeftPercent="66.7%"
+            app:layout_marginTopPercent="40.0%"
+            android:background="@color/white"/>
+
+        <ImageView
+            app:layout_widthPercent="82.0%"
+            app:layout_heightPercent="34.4%"
+            app:layout_marginTopPercent="43%"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/vendor_payment_club_game"/>
+
+        <Button
+            app:layout_widthPercent="33.9%"
+            app:layout_heightPercent="7.3%"
+            app:layout_marginTopPercent="81.2%"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/vendor_payment_button"
+            android:text="继续购买"
+            android:onClick="continueShop"
+            android:textColor="@color/white"
+            style="@style/Vendor.Text.LargeNor"/>
+
+        <Button
+            app:layout_widthPercent="33.9%"
+            app:layout_heightPercent="7.3%"
+            app:layout_marginTopPercent="90.7%"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/vendor_payment_finish_bg"
+            android:text="完成"
+            android:onClick="backProductInfo"
+            android:textColor="@color/white"
+            style="@style/Vendor.Text.LargeNor"/>
+
+
+    </android.support.percent.PercentRelativeLayout>
+
+</layout>

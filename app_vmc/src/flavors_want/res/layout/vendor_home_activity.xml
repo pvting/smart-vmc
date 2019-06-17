@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <!--
+    ~
+    ~ 首页布局
+    ~
+    -->
+    <android.support.percent.PercentRelativeLayout
+        style="@style/Vendor.Frame"
+        android:id="@id/vendor_home_style_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+       >
+
+        <!-- 顶部信息展示区 -->
+        <FrameLayout
+
+            android:id="@id/home_info"
+            app:layout_heightPercent="11.12%"
+            app:layout_widthPercent="100%" />
+
+        <!-- 中部视频广告区 -->
+        <FrameLayout
+
+            android:layout_marginLeft="@dimen/dp24"
+            android:layout_marginRight="@dimen/dp24"
+            android:layout_below="@id/home_info"
+            android:id="@id/home_advert_video"
+            android:layout_marginTop="@dimen/dp10"
+            app:layout_heightPercent="30%"
+            app:layout_widthPercent="100%" />
+
+        <!-- 中部图片广告区 -->
+        <FrameLayout
+            android:layout_marginLeft="@dimen/dp24"
+            android:layout_marginRight="@dimen/dp24"
+            android:layout_below="@id/home_advert_video"
+            android:id="@id/home_advert_image"
+            android:layout_marginTop="13dp"
+            app:layout_heightPercent="22%"
+            app:layout_widthPercent="100%" />
+
+
+        <android.support.percent.PercentRelativeLayout
+            app:layout_heightPercent="34.33%"
+            app:layout_widthPercent="100%"
+            android:layout_below="@id/home_advert_image"
+            android:layout_marginLeft="@dimen/dp24"
+            android:layout_marginRight="@dimen/dp24"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_marginBottom="15dp"
+            android:gravity="center">
+            <!-- 提货区 -->
+
+            <FrameLayout
+                android:id="@id/home_surprise"
+                app:layout_heightPercent="55.44%"
+                app:layout_widthPercent="36.45%" />
+
+            <!-- 购物引导区 -->
+            <FrameLayout
+                android:layout_marginTop="@dimen/dp10"
+                android:id="@id/home_guide"
+                android:layout_alignParentBottom="true"
+                app:layout_heightPercent="42.64%"
+                app:layout_widthPercent="36.45%"
+
+                />
+
+            <!-- 购物入口 -->
+            <FrameLayout
+                android:layout_marginLeft="@dimen/dp10"
+                android:id="@id/home_shopping"
+                android:layout_alignParentRight="true"
+                android:layout_toRightOf="@id/home_guide"
+                app:layout_heightPercent="100%"
+                app:layout_widthPercent="55.98%" />
+        </android.support.percent.PercentRelativeLayout>
+
+
+    </android.support.percent.PercentRelativeLayout>
+</layout>
+

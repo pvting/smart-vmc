@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.want.vmc.product.info.scan.ScanViewModel" />
+    </data>
+
+    <!--
+    ~
+    ~ 
+    ~
+    -->
+
+    <android.support.percent.PercentRelativeLayout
+        style="@style/Vendor.Frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/vendor_button_bg_white_shap"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_heightPercent="20%"
+            app:layout_widthPercent="100%">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical|right"
+                android:maxLines="1"
+                android:textSize="@dimen/text_size_36"
+                android:textStyle="bold"
+                android:text="@{model.payState}"
+                tools:text="@string/scan_pay_and_waitproduct" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical|right"
+                android:maxLines="1"
+                android:textSize="@dimen/text_size_16"
+                android:text="@{model.payMessage}"
+                tools:text="@string/scan_operate_msg" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/product_back"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_heightPercent="60%"
+            app:layout_widthPercent="70%">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/pay_qr_image"
+                    android:layout_width="240dp"
+                    android:layout_height="240dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="@dimen/dp5"
+                    android:contentDescription="@string/app_name"
+                    android:padding="@dimen/dp5"
+                    app:imageBitmap="@{model.qRCodeBitmap}"
+                    tools:src="@drawable/default_image"
+                    tools:visibility="visible" />
+
+                <ProgressBar
+                    android:id="@+id/pay_qr_loading"
+                    style="@style/Widget.AppCompat.ProgressBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:visibility="@{model.progressIsVisible}" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:gravity="center"
+                android:padding="@dimen/dp10"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/alipayImg"
+                    android:layout_width="80dp"
+                    android:visibility="@{model.payIconIsVisible}"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center_vertical"
+                    app:imageSrc="@{model.payMentScanIcon}"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/dp10"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:textStyle="bold"
+                        android:text="@{model.payMent}"
+                        android:textSize="@dimen/text_size_34"
+                        tools:text="@string/scan_no_payway" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="@{model.payMentScan}"
+                        android:textSize="@dimen/text_size_16"
+                        tools:text="@string/scan_choose_payway" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:maxLines="1"
+            android:textSize="@dimen/text_size_16"
+            android:text="@{model.customerTelphone}"
+            app:layout_heightPercent="20%"
+            app:layout_widthPercent="100%"
+            tools:text="@string/scan_call_help" />
+
+    </android.support.percent.PercentRelativeLayout>
+</layout>

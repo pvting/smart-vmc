@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="banner_indicatorId" type="id" />
+    <item name="textwatched_bindId" type="id" />
+    <item name="vendor_home_style_bg" type="id" />
+    <item name="watergod_home_style_bg" type="id" />
+    <item name="Frame_thunder" type="id" />
+    <item name="cornerBottomRight" type="id" />
+    <item name="cornerBottomLeft" type="id" />
+    <item name="cornerTopRight" type="id" />
+    <item name="cornerTopLeft" type="id" />
+
+    <item name="vendor_home_weather_sunny_background" type="id" />
+</resources>

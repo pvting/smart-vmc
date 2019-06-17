@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <!--
+    ~
+    ~ 
+    ~
+    -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@android:color/black"
+        android:padding="@dimen/media">
+
+        <TextView
+            android:id="@+id/console_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="正在初始化系统..\n"
+            android:textColor="#67F76F"
+            android:textSize="@dimen/text_size_18" />
+    </ScrollView>
+</layout>

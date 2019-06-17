@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.want.vendor.product.info.payment.ReSelectPaymentsViewModel" />
+    </data>
+
+    <!--
+    ~
+    ~ 
+    ~
+    -->
+<!--
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            app:layout_widthPercent= "45.6%"
+            app:layout_heightPercent="40.0%"
+            app:layout_marginLeftPercent="27.5%"
+            android:background="@drawable/vendor_payment_alipay_selected"/>
+
+        <TextView
+            style="@style/Vendor.Text"
+            android:text="支付宝支付"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_marginLeftPercent="44.1%"
+            app:layout_marginTopPercent="59.8%"
+            android:textColor="@color/white" />
+
+        <TextView
+            style="@style/Vendor.Text.Small"
+            android:text="打开支付宝扫描"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_marginLeftPercent="44.1%"
+            app:layout_marginTopPercent="65.2%"
+            android:textColor="@color/white" />
+
+        <Button
+            app:layout_widthPercent="45.6%"
+            app:layout_heightPercent="17.9%"
+            app:layout_marginLeftPercent="27.5%"
+            app:layout_marginTopPercent="76.8%"
+            android:background="@drawable/vendor_payment_button_bg"
+            android:text="重新选择支付方式"
+            android:onClick="@{model.rechoosePayment}"
+            android:textSize="30sp"
+            android:textColor="@color/white"/>
+
+    </android.support.percent.PercentRelativeLayout>-->
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            app:layout_widthPercent="45.6%"
+            android:background="@drawable/vendor_product_background"
+            android:layout_centerHorizontal="true"
+            app:layout_heightPercent="45%">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawablePadding="@dimen/dp16"
+                android:gravity="center_vertical"
+                android:lineSpacingExtra="10dp"
+                android:text="@{model.getPaymentDescription(context)}"
+                app:drawableLeftSrc="@{model.paymentIcon}"
+                tools:drawableLeft="@drawable/icon_alipay_normal"
+                tools:text="现金支付\n0.5元、1元、5元、10元" />
+
+        </FrameLayout>
+
+        <Button
+            android:visibility="@{model.showResetBtn}"
+            android:id="@id/product_rechoose_payment"
+            app:layout_widthPercent="45.6%"
+            app:layout_marginTopPercent="52.0%"
+            android:background="@drawable/vendor_payment_button"
+            android:layout_centerHorizontal="true"
+            android:onClick="@{model.rechoosePayment}"
+            android:text="@string/product_payment_rechoose"
+            android:textColor="@color/white"
+            style="@style/Vendor.Text.LargeNor"
+            app:layout_heightPercent="45%" />
+
+    </android.support.percent.PercentRelativeLayout>
+
+</layout>

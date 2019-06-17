@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <data>
+        <variable
+            name="model"
+            type="com.want.vendor.product.list.category.ProductCategoryViewModel" />
+    </data>
+
+    <!--
+    ~
+    ~ 
+    ~
+    -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <com.want.vendor.ui.view.CategoryView
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp6"
+        android:background="@drawable/vendor_product_list_type_bg"
+        android:layout_marginLeft="@dimen/dp10"
+        android:layout_marginRight="@dimen/dp10"
+        android:id="@+id/product_list_categroy"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </com.want.vendor.ui.view.CategoryView>
+    </FrameLayout>
+</layout>

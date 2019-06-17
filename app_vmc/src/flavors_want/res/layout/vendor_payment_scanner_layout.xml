@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.want.vendor.product.info.scanner.ScannerViewModel" />
+    </data>
+
+    <!--
+    ~
+    ~
+    ~
+    -->
+
+    <android.support.percent.PercentRelativeLayout
+        android:id="@id/vendor_home_style_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/vendor_product_background"
+            android:gravity="center"
+            app:layout_heightPercent="90.3%"
+            app:layout_widthPercent="93.8%">
+
+            <RelativeLayout
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/pay_qr_image"
+                    android:layout_width="@dimen/dp240"
+                    android:layout_height="@dimen/dp240"
+                    android:layout_centerInParent="true"
+                    android:contentDescription="@string/app_name"
+                    android:padding="@dimen/dp5"
+                    app:imageBitmap="@{model.qRCodeBitmap}"
+                    tools:visibility="visible" />
+                <ImageView
+                    android:id="@+id/pay_qr_image_icon"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_centerInParent="true"
+                    app:imageSrc="@{model.codepaymenticon}"
+                    android:visibility="@{model.payMentVisible}"
+                    tools:visibility="visible" />
+                <!--android:src="@{model.codepaymenticon}"-->
+
+                <TextView
+                    android:layout_width="240dp"
+                    android:layout_height="240dp"
+                    android:text="二维码生成中\n请稍等"
+                    android:visibility="@{model.textCodeIsVisible}"
+                    android:layout_centerInParent="true"
+                    android:textSize="28dp"
+                    android:gravity="center"
+                    android:textAlignment="center" />
+
+                <ProgressBar
+                    android:id="@+id/pay_qr_loading"
+                    style="@style/Widget.AppCompat.ProgressBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:visibility="@{model.progressIsVisible}" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_centerHorizontal="true"
+                android:layout_width="@dimen/dp1"
+                android:layout_height="@dimen/dp225"
+                android:layout_marginTop="@dimen/dp10"
+                android:background="@color/text_color_deep_red"
+                android:visibility="@{model.lineIsVisible}">
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="@dimen/dp315"
+                    android:layout_height="@dimen/dp240"
+                    android:layout_marginLeft="@dimen/dp20"
+                    app:image_url="@{model.elementImg}"
+                    android:visibility="@{model.elementIsVisible}"
+                    tools:src="@drawable/default_image"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableTop="@drawable/vendor_product_money_icon"
+                    android:text="@string/select_payment"
+                    style="@style/Vendor.Text.Large"
+                    android:layout_marginLeft="@dimen/dp50"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/text_color_deep_red"
+                    android:visibility="@{model.moneyIconIsVisible}"
+                    android:textAlignment="center" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </android.support.percent.PercentRelativeLayout>
+</layout>

@@ -1,0 +1,43 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.ext.BUILD.compileSdkVersion
+    buildToolsVersion rootProject.ext.BUILD.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.BUILD.minSdkVersion
+        targetSdkVersion rootProject.ext.BUILD.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    // enable data binding
+    dataBinding {
+        enabled true
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+    sourceSets { main { assets.srcDirs = ['src/main/assets', 'src/main/assets/'] } }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile project(':vmc_core')
+    testCompile 'junit:junit:4.12'
+    compile project(path: ':liba_project')
+    compile 'com.android.support:support-v4:23.1.0'
+}

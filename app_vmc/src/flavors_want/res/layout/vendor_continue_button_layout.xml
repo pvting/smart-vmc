@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="model"
+            type="com.want.vendor.tips.cancelorder.CancelOrderViewModel"/>
+    </data>
+
+    <!--
+    ~
+    ~ 公共返回视图
+    ~
+    -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:onClick="@{model.onBackClicked}"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/Vendor.Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/vendor_product_info_back_bg"
+            android:gravity="center"
+            android:maxLines="1"
+            android:padding="1dp"
+            android:text="@string/vendor_cancel_order"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_33"
+            tools:text="(59)"/>
+
+    </FrameLayout>
+</layout>

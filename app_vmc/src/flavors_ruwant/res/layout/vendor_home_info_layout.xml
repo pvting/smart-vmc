@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="model"
+            type="com.want.vmc.home.info.InfoViewModel" />
+    </data>
+
+    <!--
+    ~
+    ~
+    ~
+    -->
+    <RelativeLayout
+        style="@style/Vendor.Frame"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        tools:background="@drawable/vendor_button_bg_white_shap"
+        android:paddingTop="8dp"
+        android:paddingLeft="40dp"
+        android:paddingBottom="8dp"
+        tools:layout_height="400dp">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_centerVertical="true"
+            android:onClick="@{model.btnGotoManagement}"
+            android:background="@drawable/vendor_home_logo"/>
+        <TextView
+            android:id="@+id/home_info_factory_code_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:text="@{model.factoryCode}"
+            android:textSize="@dimen/text_size_18"
+            tools:text="机号：3104193048" />
+
+        <TextView
+            android:id="@+id/home_info_date_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:text="@{model.date}"
+            android:textSize="@dimen/text_size_18"
+            tools:text="星期日 7月24日" />
+        <TextView
+            android:id="@+id/vendor_hottel_tv"
+            android:text="@{model.configNum}"
+            android:textSize="@dimen/text_size_18"
+            android:paddingRight="30dp"
+            android:layout_toLeftOf="@+id/home_info_factory_code_text"
+            android:layout_toStartOf="@+id/home_info_factory_code_text"
+            android:layout_alignBaseline="@+id/home_info_factory_code_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="客服电话：021-61151616"/>
+        <TextView
+            android:id="@+id/home_info_time_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:text="@{model.time}"
+            android:textSize="@dimen/text_size_34"
+            tools:text="10:00" />
+
+    </RelativeLayout>
+</layout>

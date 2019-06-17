@@ -1,0 +1,46 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context="com.want.vendor.tips.TipsDialogFragment">
+
+    <android.support.percent.PercentRelativeLayout
+        android:id="@id/vendor_home_style_bg"
+        android:layout_width="@dimen/dp660"
+        android:layout_height="@dimen/dp1000"
+        android:layout_gravity="center"
+        android:background="@drawable/vendor_guide_hint_bg">
+
+        <!-- 提示信息-->
+        <FrameLayout
+            android:id="@+id/vendor_tips_problem_code"
+            android:layout_centerHorizontal="true"
+            app:layout_heightPercent="60%"
+            app:layout_marginTopPercent="16.6%"
+            app:layout_widthPercent="70%"/>
+
+        <!-- 等待出货-->
+        <Button
+            android:id="@+id/btn_wait_goods"
+            style="@style/Vendor.Text"
+            android:layout_gravity="center"
+            android:background="@drawable/button_back_select"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_33"
+            app:layout_heightPercent="10%"
+            app:layout_marginLeftPercent="55%"
+            app:layout_marginTopPercent="85%"
+            app:layout_widthPercent="34%"/>
+
+        <!-- 取消订单-->
+        <FrameLayout
+            android:id="@+id/vendor_cancel_order"
+            app:layout_heightPercent="10%"
+            app:layout_marginLeftPercent="15%"
+            app:layout_marginTopPercent="85%"
+            app:layout_widthPercent="34%"/>
+
+    </android.support.percent.PercentRelativeLayout>
+</FrameLayout>

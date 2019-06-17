@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/dp20"
+    tools:context="vmc.project.ui.HomeActivity"
+    android:background="@drawable/weather_bg"
+    android:id="@+id/home_weather_layout">
+
+
+    <ImageView
+        android:id="@+id/location1"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/location"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="上海"
+        android:layout_toRightOf="@id/location1"
+        android:textSize="@dimen/dp20"
+        android:layout_marginTop="@dimen/dp5"
+        android:textColor="@color/white"/>
+    <ImageView
+        android:id="@+id/weathericon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/rain"
+        android:layout_below="@id/location1"
+        android:layout_marginTop="30dp"/>
+    <TextView
+        android:id="@+id/tv_weather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="多云"
+        android:layout_below="@id/location1"
+        android:textColor="@color/white"
+        android:textSize="@dimen/dp16"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/weathericon"/>
+    <TextView
+        android:id="@+id/tv_temperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="27℃"
+        android:layout_below="@id/tv_weather"
+        android:textColor="@color/white"
+        android:textSize="@dimen/dp20"
+        android:layout_toRightOf="@id/weathericon"
+        android:layout_marginLeft="5dp"/>
+    
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="星期日 7月24日"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/dp18"
+        android:textSize="@dimen/dp20"
+        android:textColor="@color/white"/>
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10:00 AM"
+        android:layout_alignParentRight="true"
+        android:textSize="40dp"
+        android:textColor="@color/white"
+        android:layout_below="@id/tv_date"/>
+
+    <TextView
+        android:id="@+id/msgs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size_12" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size_12" />
+</RelativeLayout>
+

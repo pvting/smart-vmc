@@ -1,0 +1,217 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion rootProject.ext.BUILD.compileSdkVersion
+    buildToolsVersion rootProject.ext.BUILD.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.BUILD.minSdkVersion
+        targetSdkVersion rootProject.ext.BUILD.targetSdkVersion
+        applicationId 'com.want.vmc'
+        versionCode 64
+        versionName "0.13.12"
+        resValue "string", "build_config_package", "${applicationId}"
+    }
+
+    // enable databinding
+    dataBinding {
+        enabled true
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    signingConfigs {
+        release {
+            storeFile file(RELEASE_STOREFILE)
+            keyAlias RELEASE_KEY_ALIAS
+            keyPassword RELEASE_KEY_PASSWORD
+            storePassword RELEASE_STOREPASSWORD
+        }
+
+        debug {
+            storeFile file(DEBUG_STOREFILE)
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+//            debuggable false
+            //qiangzeng160518 编译时移除不用资源
+            shrinkResources false
+
+            signingConfig signingConfigs.release
+            proguardFiles new File('../proguard-rules.pro')
+
+            //qiangzeng160428 检查内存泄露的宏开关
+            buildConfigField "boolean", "LEAKCANARY_ON", "false"
+        }
+
+        //qiangzeng160428
+        debug {
+
+            //检查内存泄露的宏开关
+            buildConfigField "boolean", "LEAKCANARY_ON", "true"
+        }
+
+        // add release sign but debugable
+//        release_debug {
+//            minifyEnabled true
+//            debuggable false
+//            signingConfig signingConfigs.release
+//            proguardFiles new File('../proguard-rules.pro')
+//            buildConfigField "boolean", "LEAKCANARY_ON", "true"
+//        }
+    }
+
+    // 产品类型，机型，版本
+    flavorDimensions 'product', 'machine', 'version'
+
+    productFlavors {
+
+        ////////////////////////////////////////////////////////////////
+        // 版本定义
+        ////////////////////////////////////////////////////////////////
+        // 如旺版本
+        flavors_ruwant {
+            dimension 'version'
+        }
+
+        // 旺旺版本
+        flavors_want {
+            dimension 'version'
+        }
+
+        ////////////////////////////////////////////////////////////////
+        // 机型定义
+        ////////////////////////////////////////////////////////////////
+        // 开发测试时使用的机型，运行到真机时不要使用这个类型
+        machine_debug {
+            dimension 'machine'
+            applicationIdSuffix '.debug'
+        }
+
+        // 久保田机型（废弃）
+        machine_boueki {
+            dimension 'machine'
+        }
+
+        // 易触机型
+        machine_yichu {
+            dimension 'machine'
+
+        }
+
+        // 富士机型
+        machine_fuji {
+            dimension 'machine'
+            applicationIdSuffix '.fuji'
+        }
+
+        // 久保田机型
+        machine_kubota {
+            dimension 'machine'
+            applicationIdSuffix '.kubota'
+        }
+
+        // 澳柯玛机型
+        machine_aucma {
+            dimension 'machine'
+            applicationIdSuffix '.aucma'
+        }
+
+        ////////////////////////////////////////////////////////////////
+        // 构建定义
+        ////////////////////////////////////////////////////////////////
+        // 产生开发环境的产品
+        build_debug {
+            dimension 'product'
+        }
+
+        // 产生测试环境的产品
+        build_test {
+            dimension 'product'
+        }
+
+        // 测试验证环境的产品
+        build_dev {
+            dimension 'product'
+        }
+
+        // 产生预生产环境环境的产品
+        build_prerelease {
+            dimension 'product'
+        }
+
+        // 产生生产环境环境的产品
+        build_release {
+            dimension 'product'
+        }
+
+        productFlavors.all { flavor ->
+            flavor.manifestPlaceholders = [CHANNEL_VALUE: name]
+        }
+
+        applicationVariants.all { variant ->
+            if (variant.buildType.name.equals('release')) {
+
+                def gitVersion = gitVersionCode()
+                variant.mergedFlavor.versionCode = gitVersion
+            }
+        }
+
+        applicationVariants.all { variant ->
+            if (variant.buildType.name.equals('release')) {
+                variant.outputs.each { output ->
+                    def outputFile = output.outputFile
+                    if (outputFile != null && outputFile.name.endsWith('release.apk')) {
+                        def fileName = "svm_v${variant.mergedFlavor.versionName}_${variant.mergedFlavor.versionCode}_${releaseTime()}_${variant.flavorName}.apk"
+                        output.outputFile = new File("$rootDir/apkFile", fileName)
+                    }
+
+                    if (output.zipAlign != null) {
+                        output.zipAlign.doLast {
+                            output.zipAlign.inputFile.delete()
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+
+    compile project(':liba_project')
+
+    // 开发调试机型
+    machine_debugCompile project(':vmc_develop')
+    // 易触机型
+    machine_yichuCompile project(':vmc_yichu')
+    // 久保田机型
+    machine_bouekiCompile project(':vmc_serialport')
+    machine_bouekiCompile project(':vmc_boueki')
+    // 富士机型
+    machine_fujiCompile project(':vmc_fuji')
+    // 久保田机型
+    machine_kubotaCompile project(':vmc_kubota')
+    // 澳柯玛机型
+    machine_aucmaCompile project(':vmc_aucma')
+    compile project(path: ':business_svm_aucma')
+}
+
+def gitVersionCode() {
+    def cmd = 'git rev-list HEAD --count'
+    cmd.execute().text.trim().toInteger()
+}
+
+// 得到当前时间的字符串 用于发包的时候拼接命名
+// 关于语言的实现参考 groovy def定义无类型的变量 返回值无类型的方法
+def releaseTime() {
+    return new Date().format("yyyyMMddHHmmss", TimeZone.getTimeZone("Asia/Shanghai"))
+}

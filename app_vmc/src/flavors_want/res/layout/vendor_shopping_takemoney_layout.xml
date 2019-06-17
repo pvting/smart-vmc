@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="model"
+            type="com.want.vendor.tips.money.TakeMoneyViewModel" />
+    </data>
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/vendor_guide_hint_bg"
+        >
+        <ImageView
+            android:id="@+id/vendor_guide_hint_img_center"
+            app:layout_marginLeftPercent="11.71%"
+            android:layout_centerInParent="true"
+            app:layout_marginRightPercent="11.71%"
+            app:layout_widthPercent="62.5%"
+            app:layout_heightPercent="50.26%"
+            app:layout_marginTopPercent="12.15%"
+            android:background="@drawable/vendor_guide_hint_center"/>
+
+        <TextView
+            android:id="@+id/vendor_shopping_money_tv"
+            app:layout_marginLeftPercent="35.96%"
+            app:layout_marginRightPercent="35.96%"
+            app:layout_widthPercent="45%"
+            app:layout_heightPercent="9.09%"
+            app:layout_marginTopPercent="28.25%"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_12"
+            tools:text="@string/vendor_shopping_money_tv" />
+        <ImageView
+            android:id="@+id/vendor_shopping_problem_money_img"
+            app:layout_marginLeftPercent="33.07%"
+            app:layout_marginRightPercent="33.07%"
+            app:layout_widthPercent="33.85%"
+            app:layout_heightPercent="19.1%"
+            app:layout_marginTopPercent="39.01%"
+            android:background="@drawable/vendor_shopping_problem_icon"/>
+        <TextView
+            android:id="@+id/vendor_shopping_pay_money_tv"
+            app:layout_marginLeftPercent="24.21%"
+            app:layout_marginRightPercent="24.21%"
+            app:layout_widthPercent="82.5%"
+            app:layout_heightPercent="12%"
+            app:layout_marginTopPercent="65.18%"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_10"
+            tools:text="@string/vendor_shopping_pay_money_tv" />
+
+    </android.support.percent.PercentRelativeLayout>
+    </layout>

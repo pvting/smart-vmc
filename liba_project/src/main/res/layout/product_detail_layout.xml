@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data></data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/dp10"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+
+            <android.support.percent.PercentRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/center_LL"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_below="@+id/head_LL"
+                    android:orientation="vertical"
+                    app:layout_heightPercent="50%"
+                    app:layout_widthPercent="100%">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/base_border_top_bottom_shape_white"
+                        android:orientation="vertical"
+                        android:padding="@dimen/dp10">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/product_name_text"
+                                    style="@style/App.Text"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:textColor="@color/base_black_1"
+                                    android:textSize="20sp"
+                                    tools:text="旺旺O泡果奶450ml" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"
+                                android:orientation="horizontal">
+
+
+                                <TextView
+                                    android:id="@+id/product_stack_text"
+                                    style="@style/App.Text"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginEnd="@dimen/dp5"
+                                    android:layout_marginRight="@dimen/dp5"
+                                    android:gravity="center"
+                                    android:textColor="@color/base_black_1"
+                                    android:textSize="12sp"
+                                    tools:text="货道:10" />
+
+                            </LinearLayout>
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:gravity="end"
+                                android:layout_alignParentRight="true"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/product_old_price_text"
+                                    style="@style/App.Text"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginEnd="@dimen/dp5"
+                                    android:layout_marginRight="@dimen/dp5"
+                                    android:gravity="center"
+                                    android:textColor="@color/base_black_1"
+                                    android:textSize="14sp"
+                                    tools:text="原价:$5.00" />
+
+                                <TextView
+                                    android:id="@+id/product_price_text"
+                                    style="@style/App.Text"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:textColor="@color/base_black_1"
+                                    android:textSize="18sp"
+                                    tools:text="$4.00" />
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+
+                    <include layout="@layout/product_detail_qr_layout"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_below="@+id/center_LL"
+                    android:orientation="vertical"
+                    app:layout_heightPercent="30%"
+                    app:layout_widthPercent="100%">
+
+                    <include layout="@layout/product_detail_payment_layout"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/head_LL"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:gravity="center|center_vertical"
+                    android:orientation="vertical"
+                    app:layout_heightPercent="30%"
+                    app:layout_widthPercent="100%"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true">
+
+                    <ImageView
+                        android:id="@+id/product_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:contentDescription="@string/app_name"
+                        android:minHeight="120dp"
+                        android:padding="@dimen/dp10"
+                        tools:src="@drawable/product_detail_img" />
+
+
+                </LinearLayout>
+
+            </android.support.percent.PercentRelativeLayout>
+
+        </LinearLayout>
+
+        <vmc.project.ui.view.CountDownView
+            android:id="@+id/back_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/button_maroon"
+            android:gravity="center"
+            android:padding="@dimen/dp10"
+            android:text="@string/back"
+            android:textColor="@color/base_black_1"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+</layout>

@@ -1,0 +1,18 @@
+<manifest package="com.want.vmc"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:name="com.want.vmc.AucmaApplication"
+        tools:replace="android:name">
+
+
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="c2ba77d8622287327669fad1e507b564"
+            tools:replace="android:value" />
+
+
+    </application>
+
+</manifest>

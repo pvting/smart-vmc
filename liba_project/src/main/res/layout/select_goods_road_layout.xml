@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+    </data>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/dp20"
+                    android:paddingLeft="@dimen/dp20"
+                    android:paddingRight="@dimen/dp10"
+                    android:paddingTop="@dimen/text_size_30"
+                    android:src="@drawable/icon_select_channel" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/select_goods"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_16" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/dp10"
+                android:layout_marginLeft="@dimen/dp20"
+                android:layout_marginRight="@dimen/dp20"
+                android:layout_marginTop="@dimen/text_size_40"
+                android:background="@drawable/select_border_bg"
+                android:paddingTop="@dimen/text_size_40"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/dp10"
+                android:paddingRight="@dimen/dp10">
+
+
+                <LinearLayout
+                    android:id="@+id/select_head_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/text_size_30"
+                    android:orientation="vertical"
+                    android:padding="@dimen/dp20">
+
+                    <EditText
+                        android:id="@+id/select_edit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/dp5"
+                        android:background="@null"
+                        android:enabled="false"
+                        android:singleLine="true"
+                        android:focusable="false"
+                        android:maxLength="4"
+                        android:gravity="center|start"
+                        android:hint="@string/select_goods_hint"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/base_black_1"
+                        android:textSize="25sp" />
+
+                    <View
+                        android:id="@+id/select_line"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp2"
+                        android:background="@color/white" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="@dimen/dp20"
+                    android:layout_marginLeft="@dimen/dp20"
+                    android:layout_marginRight="@dimen/dp20"
+                    android:layout_marginTop="@dimen/text_size_30"
+                    android:paddingTop="@dimen/dp10"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@id/recyclerview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        tools:listitem="@layout/select_goods_road_item_layout" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/select_bottom_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/text_size_40"
+                    android:paddingBottom="@dimen/text_size_40"
+                    android:orientation="vertical">
+
+
+                    <Button
+                        android:id="@+id/ok_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/dp20"
+                        android:background="@drawable/button_maroon"
+                        android:gravity="center"
+                        android:text="@string/ok"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_20" />
+
+
+                    <vmc.project.ui.view.CountDownView
+                        android:id="@+id/back_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/dp20"
+                        android:layout_marginBottom="@dimen/text_size_30"
+                        android:background="@drawable/button_transparent"
+                        android:gravity="center"
+                        android:text="@string/finish"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_20" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+</layout>

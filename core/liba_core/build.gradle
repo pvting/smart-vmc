@@ -1,0 +1,102 @@
+apply plugin: 'com.android.library'
+apply plugin: 'android-apt'
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile rootProject.ext.supportDependencies.v4
+    compile rootProject.ext.supportDependencies.appcompat
+
+    // core framework
+    compile project(':core_framework')
+    // vmc log
+    compile project(':core_log')
+
+    // base model
+    compile rootProject.ext.wantDependencies.ability
+
+    //qiangzeng160428 检查内存泄露 版本号需要填写在github上的最新版本
+    // https://github.com/square/leakcanary
+    debugCompile rootProject.ext.squareDependencies.leakcanary
+    releaseCompile rootProject.ext.squareDependencies.leakcanary_no_op
+
+    // AndRouter
+    compile 'com.github.campusappcn.AndRouter:router:1.2.5'
+    apt 'com.github.campusappcn.AndRouter:compiler:1.2.5'
+    //- end
+}
+
+android {
+    compileSdkVersion rootProject.ext.BUILD.compileSdkVersion
+    buildToolsVersion rootProject.ext.BUILD.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.BUILD.minSdkVersion
+        targetSdkVersion rootProject.ext.BUILD.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+    }
+
+    // enable data binding
+    dataBinding {
+        enabled true
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    sourceSets {
+        main {
+            res.srcDirs = [
+                    'src/main/res/',
+            ]
+        }
+    }
+
+    // FIXME 以下代码需要放置到application所在的model中
+    signingConfigs {
+        release {
+            storeFile file(RELEASE_STOREFILE)
+            keyAlias RELEASE_KEY_ALIAS
+            keyPassword RELEASE_KEY_PASSWORD
+            storePassword RELEASE_STOREPASSWORD
+        }
+
+        debug {
+            storeFile file(DEBUG_STOREFILE)
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+
+            //qiangzeng160518 编译时移除不用资源
+            shrinkResources true
+
+            signingConfig signingConfigs.release
+//            proguardFiles new File('../proguard-rules.pro')
+
+            //qiangzeng160428 检查内存泄露的宏开关
+            buildConfigField "boolean", "LEAKCANARY_ON", "true"
+        }
+
+        //qiangzeng160428
+        debug {
+
+            //检查内存泄露的宏开关
+            buildConfigField "boolean", "LEAKCANARY_ON", "true"
+        }
+
+        // add release sign but debugable
+        release_debug {
+            minifyEnabled false
+            debuggable true
+            signingConfig signingConfigs.release
+//            proguardFiles new File('../proguard-rules.pro')
+            buildConfigField "boolean", "LEAKCANARY_ON", "true"
+        }
+    }
+    // -end
+}

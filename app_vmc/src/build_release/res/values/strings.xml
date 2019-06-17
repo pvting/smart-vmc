@@ -1,0 +1,14 @@
+<resources>
+
+    <!--
+    ~
+    ~ 服务器配置信息
+    ~
+    -->
+    <string name="odoo_host">https://svm.hollywant.com</string>
+    <string name="odoo_db">svm</string>
+    <string name="odoo_unam">svm_vendor</string>
+    <string name="odoo_pswd">123456</string>
+    <string name="log_level">ALL</string>
+
+</resources>

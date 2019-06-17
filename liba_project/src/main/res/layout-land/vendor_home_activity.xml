@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <!--
+    ~
+    ~ 首页布局
+    ~
+    -->
+    <android.support.percent.PercentRelativeLayout
+        style="@style/Vendor"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="0dp">
+
+        <!-- 顶部信息展示区 -->
+        <FrameLayout
+            android:id="@id/home_info"
+            android:background="@drawable/vendor_frame_background_bottom"
+            app:layout_heightPercent="15.6%"
+            app:layout_widthPercent="100%" />
+
+        <!-- 中部广告区 -->
+        <FrameLayout
+            android:id="@id/home_advert_video"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/home_info"
+            android:layout_marginLeft="@dimen/dp2"
+            android:layout_marginRight="@dimen/dp2"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/vendor_button_bg_white_shap"
+            app:layout_aspectRatio="180%"
+            app:layout_heightPercent="71.7%" />
+
+        <!-- 购物引导区 -->
+        <FrameLayout
+            android:id="@id/home_guide"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/home_info"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/home_advert_video"
+            android:background="@drawable/vendor_button_bg_white_shap"
+            app:layout_heightPercent="40.2%" />
+
+        <!-- 购物入口 -->
+        <FrameLayout
+            android:id="@id/home_shopping"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/home_guide"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/home_advert_video"
+            android:background="@drawable/vendor_button_bg_white_shap"
+            app:layout_heightPercent="40.2%" />
+
+    </android.support.percent.PercentRelativeLayout>
+</layout>

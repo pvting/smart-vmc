@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <!--
+    ~
+    ~
+    ~
+    -->
+
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/movie_top"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_alignParentTop="true"
+            app:layout_heightPercent="30%"
+            app:layout_widthPercent="100%">
+
+
+            <VideoView
+                android:id="@+id/video_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/movie_center"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_below="@+id/movie_top"
+            app:layout_heightPercent="30%"
+            app:layout_widthPercent="100%">
+
+
+            <vmc.project.ui.view.MyVideoView
+                android:id="@+id/my_video_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/movie_bottom"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_below="@+id/movie_center"
+            app:layout_heightPercent="30%"
+            app:layout_widthPercent="100%">
+
+
+            <com.pili.pldroid.player.widget.PLVideoView
+                android:id="@+id/pl_video_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true" />
+
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_below="@+id/movie_bottom"
+            android:orientation="horizontal"
+            app:layout_heightPercent="10%"
+            app:layout_widthPercent="100%">
+
+            <Button
+                android:id="@+id/text1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dp2"
+                android:layout_marginRight="@dimen/dp2"
+                android:layout_weight="1"
+                android:textSize="10sp"
+                android:text="原始VideoView"/>
+
+            <Button
+                android:id="@+id/text2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dp2"
+                android:layout_marginRight="@dimen/dp2"
+                android:layout_weight="1"
+                android:textSize="10sp"
+                android:text="原始VideoView自适应屏幕"/>
+
+            <Button
+                android:id="@+id/text3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dp2"
+                android:layout_marginRight="@dimen/dp2"
+                android:layout_weight="1"
+                android:textSize="10sp"
+                android:text="第三方"/>
+        </LinearLayout>
+
+    </android.support.percent.PercentRelativeLayout>
+
+
+</layout>

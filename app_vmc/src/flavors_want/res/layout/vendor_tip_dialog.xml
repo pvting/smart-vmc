@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="400dp"
+              android:layout_height="300dp"
+              android:layout_gravity="center"
+              android:background="@drawable/product_back"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="30dp"
+            android:text="@string/product_payment_deal_tip_1"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_20"
+            tools:text="请先取出现金"
+        />
+
+        <TextView
+            android:id="@+id/message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:padding="@dimen/dp20"
+            android:text="@string/product_payment_deal_tip_2"
+            android:textSize="@dimen/text_size_18"
+            tools:text="您已投币/投钞，如选择其它方式付款\n请先按下退币杆，退出现金" />
+    </LinearLayout>
+
+    <!-- 返回 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp">
+        <!--<FrameLayout-->
+        <!--android:id="@+id/vendor_back2"-->
+        <!--android:background="@drawable/vendor_button_bg_red_shap"-->
+        <!--android:layout_height="70dp"-->
+        <!--android:layout_width="200dp"-->
+        <!--android:layout_centerHorizontal="true"/>-->
+        <Button
+            android:id="@+id/commit"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/vendor_frame_background_red"
+            android:text="@string/ok"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+</LinearLayout>

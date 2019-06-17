@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<data>
+    <variable
+        name="model"
+        type="com.want.vendor.product.list.page.PageViewModel">
+    </variable>
+
+</data>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dp2"
+    android:background="@drawable/paging_rectangle_bg"
+    android:orientation="horizontal">
+
+
+    <vmc.project.ui.view.CountDownView
+        android:id="@+id/page_control_back_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:background="@drawable/button_back_select"
+        android:gravity="center"
+        android:text="@string/back"
+        android:textColor="@color/base_black_1"
+        android:textSize="36sp" />
+
+
+    <TextView
+        android:onClick="@{model.onPreviousPage}"
+        android:id="@+id/page_control_previous_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="10dp"
+        android:drawableLeft="@drawable/icon_previous"
+        android:drawablePadding="@dimen/dp10"
+        android:drawableStart="@drawable/icon_previous"
+        android:gravity="center"
+        android:text="@string/previous"
+        android:textColor="@color/white"
+        android:textSize="36sp"
+        android:visibility="@{model.showPreviousBtn}"
+        android:layout_alignBaseline="@+id/page_control_next_text"
+        android:layout_alignBottom="@+id/page_control_next_text"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:onClick="@{model.onNextPage}"
+        android:visibility="@{model.showNextBtn}"
+        android:id="@+id/page_control_next_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:drawableEnd="@drawable/icon_next"
+        android:drawablePadding="@dimen/dp10"
+        android:drawableRight="@drawable/icon_next"
+        android:gravity="center"
+        android:text="@string/next"
+        android:textColor="@color/white"
+        android:textSize="36sp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>
+</layout>

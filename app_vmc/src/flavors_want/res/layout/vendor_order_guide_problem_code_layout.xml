@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="model"
+            type="com.want.vendor.tips.problem.OrderProblemViewModel"/>
+    </data>
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/vendor_guide_problem_img_center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp"
+            android:background="@drawable/vendor_error_help"
+            android:orientation="vertical"
+            app:layout_widthPercent="72.7%">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="470"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/vendor_guide_problem_name_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0.0dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="top|center_horizontal"
+                    android:layout_marginTop="30dp"
+                    android:layout_weight="13"
+                    android:gravity="center"
+                    android:text="@string/vendor_order_guide_problem_name_tv"
+                    android:textSize="@dimen/text_size_18"
+                    android:textColor="@color/white"
+                    tools:textColor="@color/black"/>
+
+                <ImageView
+                    android:id="@+id/vendor_guide_problem_img_code"
+                    android:layout_width="@dimen/dp240"
+                    android:layout_height="0.0dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="25"
+                    android:maxHeight="@dimen/dp240"
+                />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0.0dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:layout_weight="11"
+                    android:gravity="center"
+                    android:text="@{@string/vendor_order_guide_problem_code(model.order)}"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_18"
+                    tools:text="订单号： 361-170626133436-34-95751"
+                    tools:textColor="@color/black"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="86"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/vendor_guide_problem_tel_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|center_horizontal"
+                    android:gravity="center"
+                    android:text="@string/vendor_guide_problem_tel_tv"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_18"
+                    android:visibility="@{model.telphoneVisible}"/>
+
+                <TextView
+                    android:id="@+id/vendor_guide_problem_num_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|center_horizontal"
+                    android:layout_marginTop="@dimen/dp2"
+                    android:gravity="center"
+                    android:text="@{model.customerTelphone}"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_28"
+                    tools:text="@string/vendor_guide_problem_num_tv"/>
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.percent.PercentRelativeLayout>
+</layout>

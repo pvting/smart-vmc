@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <!--
+    ~
+    ~ 商品信息页面
+    ~
+    -->
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <!-- 产品展示区 -->
+        <FrameLayout
+            android:id="@id/product_info_details"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/vendor_frame_background_top"
+            app:layout_heightPercent="45.8%"
+            app:layout_widthPercent="42.3%" />
+
+        <!-- 支付方式选择区 -->
+        <FrameLayout
+            android:id="@id/product_info_payment"
+            android:layout_alignLeft="@id/product_info_details"
+            android:layout_alignRight="@id/product_info_details"
+            android:layout_below="@id/product_info_details"
+            android:background="@drawable/vendor_frame_background_bottom"
+            app:layout_heightPercent="36.2%" />
+
+        <!-- 返回 -->
+        <FrameLayout
+            android:id="@id/vendor_back"
+            android:layout_alignLeft="@id/product_info_details"
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@id/product_info_details"
+            android:layout_below="@id/product_info_payment"
+            android:layout_marginTop="@dimen/dp10"
+            android:background="@drawable/vendor_frame_background_red"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            app:layout_heightPercent="14.1%" />
+
+        <!-- 二维码扫描区 -->
+        <FrameLayout
+            android:id="@id/product_info_scanner"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignTop="@+id/product_info_details"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/product_info_details"
+            android:background="@drawable/vendor_frame_background"
+            app:layout_widthPercent="54.8%" />
+
+    </android.support.percent.PercentRelativeLayout>
+</layout>

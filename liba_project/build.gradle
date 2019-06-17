@@ -1,0 +1,68 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.ext.BUILD.compileSdkVersion
+    buildToolsVersion rootProject.ext.BUILD.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.BUILD.minSdkVersion
+        targetSdkVersion rootProject.ext.BUILD.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    // enable databinding
+    dataBinding {
+        enabled true
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testCompile 'junit:junit:4.12'
+    // android support
+    compile supportDependencies.appcompat
+    compile supportDependencies.v4
+    compile supportDependencies.gridlayout
+    compile supportDependencies.design
+    // want
+    compile wantDependencies.imageloader
+    //二维码
+    compile 'com.github.kenglxn.QRGen:android:2.2.0'
+    //百分比库
+    compile 'com.android.support:percent:24.1.0'
+    // Vertical TabLayout
+    compile 'q.rorbin:VerticalTabLayout:1.1.0'
+
+    compile 'com.facebook.fresco:fresco:0.12.0'
+    // 支持 GIF 动图，需要添加
+    compile 'com.facebook.fresco:animated-gif:0.12.0'
+
+
+
+    compile files('libs/pldroid-player-1.5.0.jar')
+
+    compile project(path: ':business_svm_fuji')
+    compile project(path: ':business_svm_yichu')
+    compile project(path: ':business_svm_kubota')
+    compile project(path: ':business_watergod')
+    compile project(path: ':core')
+
+}

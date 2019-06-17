@@ -1,0 +1,91 @@
+include ':app_vmc', ':liba_project'
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+// core
+include ':core'
+project(':core').projectDir = new File('core/liba_core')
+include ':core_log'
+project(':core_log').projectDir = new File('core/liba_log')
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+// include library
+// sdk
+include ':core_framework'
+project(':core_framework').projectDir = new File('library/liba_core_framework/library')
+
+// payment
+//include ':module_payment_core'
+//project(':module_payment_core').projectDir = new File('library/liba_module_payment/liba_payment_core')
+
+// location
+include ':location_core'
+project(':location_core').projectDir = new File('library/liba_module_location/liba_location_core')
+
+include ':location_gd'
+project(':location_gd').projectDir = new File('library/liba_module_location/liba_location_gd')
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+// include vmc layer
+// vmc core module
+include ':vmc_core'
+project(':vmc_core').projectDir = new File('vmc/lib_vmc_core')
+// vmc串口通信
+include ':vmc_serialport_native'
+project(':vmc_serialport_native').projectDir = new File('vmc/liba_vmc_serialport_native')
+include ':vmc_serialport'
+project(':vmc_serialport').projectDir = new File('vmc/liba_vmc_serialport')
+// vmc易触实现
+include ':vmc_yichu'
+project(':vmc_yichu').projectDir = new File('vmc/vmc_impl_yichu')
+// vmc开发实现
+include ':vmc_develop'
+project(':vmc_develop').projectDir = new File('vmc/vmc_impl_develop')
+// vmc久保田实现
+include ':vmc_boueki'
+project(':vmc_boueki').projectDir = new File('vmc/vmc_impl_boueki')
+// vmc水神实现
+include ':mvc_watergod'
+project(':mvc_watergod').projectDir = new File('vmc/vmc_impl_watergod')
+// vmc富士实现
+include ':vmc_fuji'
+project(':vmc_fuji').projectDir = new File('vmc/vmc_impl_fuji')
+// vmc久保田实现
+include ':vmc_kubota'
+project(':vmc_kubota').projectDir = new File('vmc/vmc_impl_kubota')
+// vmc澳柯玛实现
+include ':vmc_aucma'
+project(':vmc_aucma').projectDir = new File('vmc/vmc_impl_aucma')
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+// include business layer
+// odoo
+include ':liba_odoo'
+project(':liba_odoo').projectDir = new File('library/liba_odoo/odoo_core')
+
+// SVM
+include ':business_svm'
+project(':business_svm').projectDir = new File('business/business_svm/business_svm')
+
+// SVM-yichu
+include ':business_svm_yichu'
+project(':business_svm_yichu').projectDir = new File('business/business_svm/business_svm_yichu')
+
+// SVM-fuji
+include ':business_svm_fuji'
+project(':business_svm_fuji').projectDir = new File('business/business_svm/business_svm_fuji')
+
+// SVM-kubota
+include ':business_svm_kubota'
+project(':business_svm_kubota').projectDir = new File('business/business_svm/business_svm_kubota')
+
+// SVM-aucma
+include ':business_svm_aucma'
+project(':business_svm_aucma').projectDir = new File('business/business_svm/business_svm_aucma')
+
+//watergod
+include ':business_watergod'
+project(':business_watergod').projectDir = new File('business/business_watergod/business_watergod')
+
+//公共接口定义
+include ':business_core'
+project(':business_core').projectDir = new File('business/business/business_core')
+

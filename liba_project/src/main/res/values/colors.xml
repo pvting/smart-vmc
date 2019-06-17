@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFF</color>
+    <color name="light_white">#00000000</color>
+    <color name="translucent">#5c000000</color>
+    <color name="razzmatazz">#DD2173</color>
+    <color name="utah_crimson">#CB0036</color>
+    <color name="onahau">#D2FAFF</color>
+    <color name="mauvelous">#ED8EAC</color>
+    <color name="pelorous">#43A3BE</color>
+    <color name="selective_yellow">#FFBD08</color>
+    <color name="jazzberry_jam">#CF2760</color>
+    <color name="picton_blue">#64A7DB</color>
+    <color name="orange">#ef8201</color>
+    <color name="gray">#989898</color>
+    <color name="lightgray">#ede9e9</color>
+    <color name="colorNumberDefault">#2B2B2B</color>
+    <color name="black">#000000</color>
+    <color name="text_color_black_1">#434343</color>
+    <color name="text_color_black_2">#333333</color>
+    <color name="text_color_gray_1">#979797</color>
+    <color name="text_color_deep_red">#5F2D00</color>
+    <color name="text_color_deep_black">#2C2C2C</color>
+    <color name="text_color_black">#4C4C4C</color>
+    <color name="sunshine_bg">#FFAB00</color>
+    <color name="thunder_bg">#4A4A4A</color>
+    <color name="snow_bg">#4BBFDC</color>
+    <color name="cloudy_bg">#6D9159</color>
+    <color name="rain_bg">#7231AB</color>
+    <color name="fog_bg">#807285</color>
+    <color name="wind_bg">#68CAA6</color>
+
+
+
+    <color name="weather_best">#68CAA6</color>
+    <color name="weather_light">#6D9159</color>
+    <color name="weather_mid">#7231AB</color>
+    <color name="weather_bad">#807285</color>
+    <color name="weather_fine">#4BBFDC</color>
+
+    <color name="text_color_supply_bottom_selected">#DD514D</color>
+    <color name="text_color_supply_bottom_normal">#C6C6C6</color>
+</resources>

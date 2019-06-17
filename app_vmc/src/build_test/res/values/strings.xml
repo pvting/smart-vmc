@@ -1,0 +1,19 @@
+<resources>
+
+    <!--
+    ~
+    ~ 服务器配置信息
+    ~
+    -->
+    <!-- 测试环境 -->
+    <string name="odoo_host">https://svmdemo03.hollywant.com</string>
+    <!--<string name="odoo_host">http://10.128.230.45:8069</string>-->
+    <string name="odoo_db">vmc2</string>
+    <string name="odoo_unam">admin</string>
+
+    <string name="odoo_pswd">admin@1234</string>
+
+    <string name="log_level">ALL</string>
+
+
+</resources>

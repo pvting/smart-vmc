@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+    ~
+    ~ 
+    ~
+    -->
+
+    <string name="product_price">¥ %1$s</string>
+    <string name="product_unavaiable">无货</string>
+</resources>

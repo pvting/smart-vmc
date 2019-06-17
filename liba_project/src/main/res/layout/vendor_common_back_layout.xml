@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="model"
+            type="vmc.vendor.common.back.BackViewModel" />
+    </data>
+
+    <!--
+    ~
+    ~ 公共返回视图
+    ~
+    -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/vendor_frame_background_red"
+        android:onClick="@{model.onBackClicked}"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/Vendor.Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/dp16"
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            android:text="返回"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dp20"
+            tools:text="返回" />
+
+        <TextView
+            style="@style/Vendor.Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dp16"
+            android:gravity="center"
+            android:text="@{@string/vendor_common_back_timeleft_format(model.timeLeft)}"
+            android:textColor="@color/white"
+            tools:text="(59)" />
+
+    </FrameLayout>
+</layout>

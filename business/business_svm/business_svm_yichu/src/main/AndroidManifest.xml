@@ -1,0 +1,18 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.vmc.yichu">
+
+    <application >
+
+
+
+        <!-- 日志上传 -->
+        <receiver android:name="com.vmc.yichu.SDKUploadReceiver">
+            <intent-filter>
+                <action android:name="vmc.project.SDK_ZIP_UPLOAD_LOG" />
+                <action android:name="vmc.project.SDK_UPLOAD_LOG" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+</manifest>

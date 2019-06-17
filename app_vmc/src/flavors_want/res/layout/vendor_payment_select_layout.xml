@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.want.vendor.product.info.payment.PaymentsViewModel" />
+    </data>
+
+    <!--
+    ~
+    ~ 
+    ~
+    -->
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/vendor_payment_alipay"
+            android:background="@{model.getAliPay(context)}"
+            android:clickable="@{model.clickableAlipay}"
+            android:onClick="@{model.onChangePayment}"
+            tools:background="@drawable/vendor_payment_alipay"
+            app:layout_heightPercent="40%"
+            app:layout_marginLeftPercent="3.1%"
+            app:layout_widthPercent="45.6%" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            app:layout_marginLeftPercent="37.93%"
+            android:src="@{model.getPromotionDrawableByAlipay}"
+            android:visibility="@{model.getPromotionByAlipayShow}"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/vendor_alipay_tv"
+            style="@style/Vendor.Text"
+            android:text="支付宝付款"
+            android:textColor="@color/text_color_deep_red"
+            android:layout_height="wrap_content"
+            app:layout_marginLeftPercent="20.1%"
+            app:layout_marginTopPercent="10%"
+            android:layout_width="wrap_content"/>
+
+        <TextView
+            style="@style/Vendor.Text.Small"
+            android:text="打开支付宝扫描"
+            android:textColor="@color/text_color_deep_red"
+            android:layout_below="@+id/vendor_alipay_tv"
+            android:layout_height="wrap_content"
+            app:layout_marginLeftPercent="20.1%"
+            android:layout_width="wrap_content" />
+
+        <ImageView
+            android:id="@+id/vendor_payment_wechat"
+            android:background="@{model.getWechatPay(context)}"
+            android:clickable="@{model.clickableWechatpay}"
+            android:onClick="@{model.onChangePayment}"
+            tools:background="@drawable/vendor_payment_wechat"
+            app:layout_heightPercent="40%"
+            app:layout_marginLeftPercent="51.3%"
+            app:layout_widthPercent="45.6%" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            app:layout_marginLeftPercent="86.51%"
+            android:src="@{model.getPromotionDrawableByWeixin}"
+            android:visibility="@{model.getPromotionByWeixinShow}"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/vendor_wechat_tv"
+            style="@style/Vendor.Text"
+            android:text="微信付款"
+            android:textColor="@color/text_color_deep_red"
+            android:layout_height="wrap_content"
+            app:layout_marginLeftPercent="68.2%"
+            app:layout_marginTopPercent="10%"
+            android:layout_width="wrap_content"/>
+
+        <TextView
+            style="@style/Vendor.Text.Small"
+            android:text="打开微信扫描"
+            android:textColor="@color/text_color_deep_red"
+            android:layout_below="@+id/vendor_wechat_tv"
+            android:layout_height="wrap_content"
+            app:layout_marginLeftPercent="68.2%"
+            android:layout_width="wrap_content" />
+
+
+        <ImageView
+            android:id="@+id/vendor_payment_cash"
+            android:background="@{model.getCashPay(context)}"
+            android:clickable="@{model.clickableCashpay}"
+            android:onClick="@{model.onChangePayment}"
+            tools:background="@drawable/vendor_payment_cash"
+            app:layout_heightPercent="40%"
+            app:layout_marginLeftPercent="3.1%"
+            app:layout_marginTopPercent="48%"
+            app:layout_widthPercent="45.6%" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            app:layout_marginLeftPercent="37.93%"
+            app:layout_marginTopPercent="48.53%"
+            android:src="@{model.getPromotionDrawableByCash}"
+            android:visibility="@{model.getPromotionByCashShow}"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/vendor_cash_tv"
+            style="@style/Vendor.Text"
+            android:layout_width="wrap_content"
+            android:text="现金支付"
+            android:textColor="@color/text_color_deep_red"
+            android:layout_height="wrap_content"
+            app:layout_marginLeftPercent="20.1%"
+            app:layout_marginTopPercent="58%" />
+
+        <TextView
+            style="@style/Vendor.Text.Small"
+            android:layout_width="wrap_content"
+            android:text=" 0.5元、1元、5元、10元"
+            android:textColor="@color/text_color_deep_red"
+            android:layout_below="@+id/vendor_cash_tv"
+            android:layout_height="wrap_content"
+            app:layout_marginLeftPercent="20.1%"/>
+
+        <ImageView
+            android:id="@+id/vendor_payment_wangbi"
+            android:background="@{model.getWangbiPay(context)}"
+            android:clickable="@{model.clickableWangbipay}"
+            android:onClick="@{model.onChangePayment}"
+            tools:background="@drawable/vendor_payment_wangbi"
+            app:layout_heightPercent="40%"
+            app:layout_marginLeftPercent="51.3%"
+            app:layout_marginTopPercent="48%"
+            app:layout_widthPercent="45.6%" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            app:layout_marginLeftPercent="86.51%"
+            app:layout_marginTopPercent="48.53%"
+            android:src="@{model.getPromotionDrawableByWantbi}"
+            android:visibility="@{model.getPromotionByWantbiShow}"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/vendor_wangbi_tv"
+            style="@style/Vendor.Text"
+            android:layout_width="wrap_content"
+            android:text="旺币支付"
+            android:textColor="@color/text_color_deep_red"
+            android:layout_height="wrap_content"
+            app:layout_marginLeftPercent="68.2%"
+            app:layout_marginTopPercent="58%" />
+
+        <TextView
+            style="@style/Vendor.Text.Small"
+            android:layout_width="wrap_content"
+            android:text="关注微信公众号扫码"
+            android:textColor="@color/text_color_deep_red"
+            android:layout_below="@+id/vendor_wangbi_tv"
+            android:layout_height="wrap_content"
+            app:layout_marginLeftPercent="68.2%"/>
+
+    </android.support.percent.PercentRelativeLayout>
+
+</layout>

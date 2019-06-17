@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.want.vendor.product.info.back.BackViewModel"/>
+    </data>
+
+    <!--
+    ~
+    ~ 公共返回视图
+    ~
+    -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+    >
+
+        <android.support.percent.PercentRelativeLayout
+            android:id="@+id/layout_back_normal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            tools:visibility="invisible"
+        >
+            <TextView
+                style="@style/Vendor.Text.LargeNor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:background="@drawable/vendor_frame_background_back_blue"
+                android:gravity="center"
+                android:onClick="@{model.onBackClicked}"
+                android:padding="20dp"
+                android:text="@{@string/vendor_common_back_timeleft_format(model.timeLeft)}"
+                android:textColor="@color/white"
+                tools:text="(59)"/>
+        </android.support.percent.PercentRelativeLayout>
+
+        <android.support.percent.PercentRelativeLayout
+            android:id="@+id/layout_weak_back"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            tools:visibility="visible"
+        >
+            <View
+                android:id="@+id/leftView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                app:layout_widthPercent="33%"/>
+            <TextView
+                android:id="@+id/countDownTv"
+                style="@style/Vendor.Text.LargeNor"
+                android:layout_width="207dp"
+                android:layout_height="95dp"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_toRightOf="@id/leftView"
+                android:background="@drawable/vendor_product_info_back_bg"
+                android:gravity="center"
+                android:onClick="@{model.onBackClicked}"
+                android:text="@{@string/vendor_common_back_timeleft_format(model.timeLeft)}"
+                android:textColor="@color/text_color_black"
+                app:layout_widthPercent="34%"
+                tools:text="(59)"/>
+
+            <TextView
+                android:id="@+id/vendor_back_tips"
+                style="@style/Vendor.Text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="19sp"
+                app:layout_widthPercent="33%"
+                android:visibility="invisible"
+                tools:text="已支付未出货时，请耐心等待\n请勿返回"
+                tools:visibility="visible"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+        </android.support.percent.PercentRelativeLayout>
+
+
+    </FrameLayout>
+</layout>

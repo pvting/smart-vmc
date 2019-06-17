@@ -1,0 +1,20 @@
+<manifest package="com.want.vmc"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:name="com.want.vmc.FujiApplication"
+        tools:replace="android:name">
+
+
+
+        <!-- 高德定位 -->
+             <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="cd8f37158e5045001776fa0225fb5102"
+            tools:replace="android:value" />
+
+
+    </application>
+
+</manifest>

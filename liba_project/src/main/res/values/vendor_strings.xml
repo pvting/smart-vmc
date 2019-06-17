@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+    ~
+    ~ 
+    ~
+    -->
+    <!-- 公共返回 -->
+    <string name="vendor_common_back_timeleft_format">返回(%1$d)</string>
+    <string name="vendor_continue_button_timeleft_format">狠心离开(%1$d)</string>
+    <string name="vendor_common_help_hint">问题求助</string>
+</resources>

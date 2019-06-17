@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="vendor_deliver_code">请输入提货码</string>
+    <string name="vendor_deliver_keyboard">键盘输入</string>
+    <string name="vendor_deliver_or"> 或</string>
+    <string name="vendor_deliver_scan_input">扫码输入</string>
+    <string name="vendor_deliver_scan_forward">请在机器右方放入兑奖卷扫描号码</string>
+    <string name="vendor_deliver_code_1">1</string>
+    <string name="vendor_deliver_code_2">2</string>
+    <string name="vendor_deliver_code_3">3</string>
+    <string name="vendor_deliver_code_4">4</string>
+    <string name="vendor_deliver_code_5">5</string>
+    <string name="vendor_deliver_code_6">6</string>
+    <string name="vendor_deliver_code_7">7</string>
+    <string name="vendor_deliver_code_8">8</string>
+    <string name="vendor_deliver_code_9">9</string>
+    <string name="vendor_deliver_code_0">0</string>
+    <string name="vendor_deliver_code_back">退格</string>
+
+
+    <!--成功的界面-->
+    <string name="vendor_deliver_success_code">提货码成功</string>
+    <string name="vendor_deliver_success_waiting"> 等待出货</string>
+    <string name="vendor_deliver_success_helping">问题求助</string>
+    <string name="vendor_deliver_success_more"> 参与活动发现更多</string>
+    <string name="vendor_deliver_success_phone"> 021-9834469813</string>
+    <string name="vendor_deliver_success_product_name"> 旺旺 蒟蒻果冻</string>
+    <string name="vendor_deliver_success_weight"> 净含量：200 ml</string>
+    <string name="vendor_deliver_success_number"> 1</string>
+    <string name="vendor_deliver_success_unit"> 包</string>
+    <string name="vendor_deliver_success_continue"> 继续提货</string>
+
+    <!--失败的界面-->
+    <string name="vendor_deliver_failure_code"> 提货失败</string>
+    <string name="vendor_deliver_failure_again"> 重新输入</string>
+    <string name="vendor_deliver_failure_helping"> 问题求助</string>
+    <string name="vendor_deliver_failure_more"> 参与活动发现更多</string>
+    <string name="vendor_deliver_failure_phone"> 021-9834469813</string>
+    <string name="vendor_deliver_failure_prompt"> 没有此号码／请留意活动日期</string>
+
+
+</resources>

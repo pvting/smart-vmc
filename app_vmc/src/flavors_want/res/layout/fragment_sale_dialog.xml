@@ -1,0 +1,32 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <android.support.percent.PercentRelativeLayout
+        android:id="@id/vendor_home_style_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:background="@drawable/vendor_guide_hint_bg">
+
+        <!-- 促销弹窗显示-->
+        <FrameLayout
+            android:id="@+id/vendor_sale_dialog"
+            app:layout_marginTopPercent="16.6%"
+            android:layout_centerHorizontal="true"
+            app:layout_heightPercent="60%"
+            app:layout_widthPercent="70%" />
+
+        <!-- 返回按钮-->
+        <FrameLayout
+            android:id="@id/vendor_back"
+            android:layout_centerHorizontal="true"
+            app:layout_marginTopPercent="85%"
+            app:layout_heightPercent="10%"
+            app:layout_widthPercent="34%" />
+
+    </android.support.percent.PercentRelativeLayout>
+</FrameLayout>

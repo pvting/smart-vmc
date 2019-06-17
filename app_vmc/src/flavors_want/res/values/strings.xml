@@ -1,0 +1,74 @@
+<resources>
+    <string name="vendor_guide_hint_name_tv">真的忍心离开吗？</string>
+
+    <string name="vendor_guide_hint_content_tv">如果由于网络延迟或其他原因售货机还没有出货，请您耐心等待几分钟或联系我们的客服人员</string>
+
+    <string name="vendor_guide_hint_below_tv">正在查询支付结果\n 取消订单会导致拿不到货\n确定取消订单？</string>
+
+    <string name="vendor_guide_hint_tel_tv">021–61150188</string>
+
+    <string name="vendor_order_guide_problem_code">订单号&#160;:&#160;%1$s</string>
+    <string name="vendor_guide_problem_name_tv">关注客服公众号\n我们将尽快为您解决问题</string>
+    <string name="vendor_guide_product_info_problem_tv">微信关注客服公众号</string>
+
+    <string name="vendor_guide_product_info_no_coin_problem">抱歉，售货机暂时无法为您提供服务\n若您已支付，请联系客服退款
+    </string>
+    <string name="vendor_guide_product_info_has_coin_problem">
+        抱歉，售货机突然断网，请使用现金购买\n若您已手机支付，请联系客服退款</string>ing>
+
+
+    <string name="vendor_guide_deliver_info_problem">
+        抱歉，售货机暂时无法为您提供服务</string>ing>
+
+
+    <string name="vendor_order_guide_problem_name_tv">扫描二维码，将订单号告知客服人员\n我们将尽快为您解决问题</string>
+    <string name="vendor_home_problem_serialporterror">发生意外啦！</string>
+    <string name="vendor_guide_problem_code_tv">扫描二维码</string>
+    <string name="vendor_guide_problem_service_tv">联系旺仔俱乐部客服</string>
+    <string name="vendor_guide_problem_tel_tv">或拨打客服电话</string>
+    <string name="vendor_guide_problem_num_tv">021–61151111 (210173)</string>
+    <string name="vendor_home_serialporterror_num_tv">哎哟，调皮的旺旺精灵干扰了售货机\n的运行，现在只能通过现金购买如有疑问，请联系客服：
+    </string>
+    <string name="vendor_home_surspringserialporterror_num_tv">
+        哎哟，调皮的旺旺精灵干扰了售货机的运行，现在无法兑换商品，请晚点再来吧！如有疑问，请联系客服：
+    </string>
+    <string name="vendor_home_serialporterror_num">12345678</string>
+
+    <string name="vendor_home_serialporterror_takemoney_tv">
+        1、通过下方金属键盘输入料道编号；\n2、投入纸币或硬币；\n3、下拨退币杆取回多余零钱。
+    </string>
+
+    <string name="vendor_shopping_money_tv">请先取出现金</string>
+
+    <string name="vendor_shopping_pay_money_tv">您已投币/投钞，如选择其它方式付款请先按下退币杆，退出现金</string>
+
+    <string name="vendor_continue_button_timeleft_format">仍要离开(%1$d)</string>
+    <string name="vendor_cancel_order">取消订单</string>
+
+    <string name="vendor_outproduct_status_success">出货成功</string>
+
+    <string name="vendor_outproduct_status_outing">正在出货中…</string>
+    <string name="vendor_outproduct_status_fail">出货失败</string>
+
+
+    <string name="vendor_login_title">请登录账号</string>
+    <string name="vendor_login_username">请输入账号</string>
+    <string name="vendor_login_password">请输入密码</string>
+    <string name="vendor_login_commit">登 录</string>
+
+    <!--天气-->
+    <string name="vendor_sun_icon">晴天</string>
+    <string name="vendor_cloudy_icon">阴天</string>
+    <string name="vendor_rain_icon">雨天</string>
+    <string name="vendor_wind_icon">风</string>
+    <string name="vendor_fog_icon">雾</string>
+    <string name="vendor_snow_icon">下雪</string>
+    <string name="vendor_thunder_icon">打雷</string>
+    <string name="vendor_download_icon">努力获取中</string>
+
+    <!--升级-->
+    <string name="vendor_upgrade_title">系统升级中</string>
+    <string name="vendor_upgrade_content">售货机暂时停止售卖</string>
+    <!--串口异常-->
+    <string name="vendor_seriport_error_content">售货机暂停售卖，请稍后再来</string>
+</resources>

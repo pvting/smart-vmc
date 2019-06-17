@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.want.vendor.deliver.fillout.FillOutViewModel" />
+
+    </data>
+
+    <android.support.percent.PercentRelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <EditText
+            android:id="@+id/vendor_deliver_order_edittext"
+            style="@style/Vendor.Text"
+            android:layout_below="@+id/vendor_order_prompt"
+            android:background="@drawable/vendor_deliver_order_frame"
+            android:focusableInTouchMode="true"
+            android:freezesText="true"
+            android:gravity="center"
+            android:inputType="number"
+            android:longClickable="false"
+            android:singleLine="true"
+            android:text="@{model.input}"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/text_size_35"
+            app:layout_aspectRatio="15.87%"
+            app:layout_marginLeftPercent="8.85%"
+            app:layout_marginTopPercent="1.25%"
+            app:layout_widthPercent="82.03%">
+            <requestFocus />
+
+        </EditText>
+
+        <View
+            android:id="@+id/vendor_deliver_order_view1"
+            android:layout_height="2dp"
+            android:layout_below="@id/vendor_deliver_order_edittext"
+            android:background="@color/base_black_1"
+            app:layout_marginLeftPercent="10.41%"
+            app:layout_marginTopPercent="2.15%"
+            app:layout_widthPercent="30.98%" />
+
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_below="@id/vendor_deliver_order_edittext"
+            android:gravity="center"
+            android:text="@string/vendor_deliver_keyboard"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dp20"
+            app:layout_heightPercent="2.41%"
+            app:layout_marginLeftPercent="39.75%"
+            app:layout_marginTopPercent="1.25%"
+            app:layout_widthPercent="20.5%" />
+
+        <View
+            android:layout_height="2dp"
+            android:layout_below="@id/vendor_deliver_order_edittext"
+            android:background="@color/base_black_1"
+            app:layout_marginLeftPercent="58.59%"
+            app:layout_marginTopPercent="2.15%"
+            app:layout_widthPercent="30.98%" />
+
+
+        <ProgressBar
+            android:id="@+id/pay_qr_loading"
+            style="@style/Widget.AppCompat.ProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="@{model.progressIsVisible}" />
+
+
+        <include
+            android:id="@+id/vendor_deliver_order_keyboard_image"
+            layout="@layout/vendor_deliver_input_layout_yichu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/textView2"
+            app:layout_heightPercent="40.4%"
+            app:layout_marginLeftPercent="13.15%"
+            app:layout_marginTopPercent="2.41%"
+            app:layout_widthPercent="73.15%"
+            app:model="@{model}" />
+
+        <!--确定按钮-->
+        <FrameLayout
+            style="@style/Vendor.Text"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/vendor_deliver_order_success_continue"
+            android:gravity="center"
+            android:textColor="@color/white"
+            app:layout_marginTopPercent="89.5%">
+
+            <Button
+                android:id="@+id/vendor_deliver_config_btn"
+                style="@style/Vendor.Text"
+                android:layout_below="@+id/vendor_deliver_order_keyboard_image"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/button_back_select"
+                android:gravity="center"
+                android:onClick="@{model.onClick}"
+                android:text="@string/ok"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_36" />
+        </FrameLayout>
+
+        <EditText
+            android:id="@+id/et_input"
+            android:layout_width="1dp"
+            android:layout_height="1dp"
+            android:cursorVisible="false">
+
+            <requestFocus />
+        </EditText>
+
+        <!--编辑框界面-->
+
+        <!--提示界面-->
+        <TextView
+            android:id="@+id/vendor_order_prompt"
+            style="@style/Vendor.Text"
+            android:layout_below="@+id/vendor_deliver_order_icon_image"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="请输入提货码"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_36"
+            app:layout_aspectRatio="16.66%"
+            app:layout_marginTopPercent="1.4%"
+            app:layout_widthPercent="35.12%" />
+
+        <!--引导图界面-->
+        <ImageView
+            android:id="@+id/vendor_deliver_order_icon_image"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/vendor_deliver_order_icon"
+            app:layout_aspectRatio="87%"
+            app:layout_widthPercent="35.16%" />
+
+
+    </android.support.percent.PercentRelativeLayout>
+
+</layout>

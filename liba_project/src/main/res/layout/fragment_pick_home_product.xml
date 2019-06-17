@@ -1,0 +1,51 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/base_border_top_shape_black"
+    android:orientation="vertical"
+    tools:context="vmc.project.supply.delivery.DeliveryFragment">
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/base_border_bottom_shape_red"
+        android:paddingLeft="@dimen/dp10"
+        android:paddingRight="@dimen/dp10">
+
+        <TextView
+            android:id="@+id/pick_home_show_supply_num_text"
+            android:layout_width="wrap_content"
+            android:textColor="@color/text_color_black_2"
+            android:textSize="@dimen/text_size_16"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="共0台售货机需要提货" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:textColor="@color/text_color_black_2"
+            android:textSize="@dimen/text_size_16"
+            android:id="@+id/pick_select_all_text"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="全选" />
+    </android.support.percent.PercentRelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/pick_home_product_btn"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/pick_product_btn_selector"
+        android:text="提货"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_17" />
+</LinearLayout>

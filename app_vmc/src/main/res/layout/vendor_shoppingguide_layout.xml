@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.want.vmc.guide.shopping.ShoppingGuideViewModel" />
+    </data>
+
+    <!--
+    ~
+    ~ 
+    ~
+    -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/vendor_product_background"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/Vendor"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/shoppingguide_step_1_title"
+                android:textColor="@color/base_yellow_3"
+                android:textSize="@dimen/text_size_40"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:src="@drawable/vendor_home_guide" />
+
+                <TextView
+                    style="@style/Vendor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/dp12"
+                    android:text="@string/shoppingguide_step_1_content"
+                    android:textColor="@color/base_yellow_3"
+                    android:textSize="@dimen/text_size_24"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+            <TextView
+                style="@style/Vendor"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:ellipsize="none"
+                android:gravity="center|center_horizontal"
+                android:inputType="textMultiLine"
+                android:paddingLeft="@dimen/dp10"
+                android:paddingRight="@dimen/dp10"
+                android:singleLine="false"
+                android:text="@string/shoppingguide_step_1_hint"
+                android:textSize="@dimen/text_size_20" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="60dp"
+            android:layout_marginTop="60dp"
+            android:background="@color/gray"></View>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/Vendor"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/shoppingguide_step_2_title"
+                android:textColor="@color/base_yellow_3"
+                android:textSize="@dimen/text_size_40"
+                android:textStyle="bold" />
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:src="@drawable/vendor_product_info_scan_none_payment" />
+
+                <TextView
+                    style="@style/Vendor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dp12"
+                    android:gravity="center"
+                    android:text="@string/shoppingguide_step_2_content"
+                    android:textColor="@color/base_yellow_3"
+                    android:textSize="@dimen/text_size_24"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+            <TextView
+                style="@style/Vendor"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:ellipsize="none"
+                android:gravity="center|center_horizontal|clip_horizontal"
+                android:inputType="textMultiLine"
+                android:paddingLeft="@dimen/dp10"
+                android:paddingRight="@dimen/dp10"
+                android:singleLine="false"
+                android:text="@string/shoppingguide_step_2_hint"
+                android:textSize="@dimen/text_size_20" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="60dp"
+            android:layout_marginTop="60dp"
+            android:background="@color/gray"></View>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/Vendor"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/shoppingguide_step_3_title"
+                android:textColor="@color/base_yellow_3"
+                android:textSize="@dimen/text_size_40"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:src="@drawable/vendor_product_info_scan_pay_success" />
+
+                <TextView
+                    style="@style/Vendor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/shoppingguide_step_3_content"
+                    android:layout_marginTop="@dimen/dp12"
+                    android:textColor="@color/base_yellow_3"
+                    android:textSize="@dimen/text_size_24"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/Vendor"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:ellipsize="none"
+                android:gravity="center|center_horizontal|clip_horizontal"
+                android:inputType="textMultiLine"
+                android:paddingLeft="@dimen/dp10"
+                android:paddingRight="@dimen/dp10"
+                android:singleLine="false"
+                android:text="@string/shoppingguide_step_3_hint"
+                android:textSize="@dimen/text_size_20" />
+
+        </LinearLayout>
+    </LinearLayout>
+</layout>

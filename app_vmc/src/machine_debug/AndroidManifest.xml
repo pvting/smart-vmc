@@ -1,0 +1,18 @@
+<manifest
+    package="com.want.vmc"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:name="com.want.vmc.DebugApplication"
+        tools:replace="android:name">
+
+        <!-- 高德定位 -->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="23e86423858367753460c839a46e4181"
+            tools:replace="android:value" />
+
+    </application>
+
+</manifest>

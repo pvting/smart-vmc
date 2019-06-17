@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+>
+    <data></data>
+
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+    >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="100dp"
+            android:background="@drawable/vendor_error_help"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+        >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="470"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="top|center_horizontal"
+                    android:layout_marginTop="33dp"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:text="@string/vendor_upgrade_title"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_28"
+                    android:textStyle="bold"/>
+                <ImageView
+                    android:id="@+id/vendor_guide_problem_img_code"
+                    android:layout_width="324dp"
+                    android:layout_height="250dp"
+                    android:layout_gravity="center|center_vertical"
+                    android:layout_marginTop="140dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/vendor_update_con"
+                />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="86"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/vendor_guide_problem_tel_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/vendor_upgrade_content"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_28"
+                />
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.percent.PercentRelativeLayout>
+</layout>

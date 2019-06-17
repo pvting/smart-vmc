@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+>
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.want.vendor.deliver.fai.FaiViewModel"/>
+
+    </data>
+
+    <android.support.percent.PercentRelativeLayout
+        android:id="@id/vendor_home_style_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        app:theme="@style/AppTheme.Fullscreen">
+        <requestFocus/>
+        <!-- 头部图片-->
+
+        <!--提示界面-->
+        <TextView
+            android:id="@+id/vendor_order_failure_prompt"
+            style="@style/Vendor.Text"
+            android:layout_below="@+id/vendor_deliver_order_failure_image"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="@string/vendor_deliver_failure_code"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_36"
+            app:layout_aspectRatio="16.66%"
+            app:layout_marginLeftPercent="2.34%"
+            app:layout_marginTopPercent="2.34%"
+            app:layout_widthPercent="30.9%"/>
+        <Button
+            android:id="@+id/vendor_order_failure_heliping"
+            style="@style/Vendor.Text"
+            android:layout_below="@+id/vendor_order_failure_prompt"
+            android:background="@drawable/vendor_deliver_order_failure_helping"
+            android:gravity="center"
+            android:onClick="@{model.onClick}"
+            android:text="@string/vendor_deliver_failure_helping"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_48"
+            app:layout_marginLeftPercent="33.07%"
+            app:layout_marginTopPercent="4.64%"/>
+
+        <!--隔线-->
+        <View
+            android:id="@+id/vendor_deliver_order_failure_view1"
+            android:layout_height="2dp"
+            android:background="@color/base_black_1"
+            app:layout_marginLeftPercent="10.41%"
+            app:layout_marginTopPercent="36.82%"
+            app:layout_widthPercent="21%"/>
+
+        <TextView
+            android:id="@+id/vendor_deliver_order_failure_textview1"
+            style="@style/Vendor.Text"
+            android:layout_toRightOf="@+id/vendor_deliver_order_failure_view1"
+            android:gravity="center_horizontal"
+            android:text="@string/vendor_deliver_failure_more"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_33"
+            app:layout_marginLeftPercent="2.21%"
+            app:layout_marginTopPercent="35.43%"/>
+
+        <View
+            android:id="@+id/vendor_deliver_order_failure_view2"
+            android:layout_height="2dp"
+            android:layout_toRightOf="@+id/vendor_deliver_order_failure_textview1"
+            android:background="@color/base_black_1"
+            app:layout_marginLeftPercent="2.21%"
+            app:layout_marginTopPercent="36.82%"
+            app:layout_widthPercent="21%"/>
+
+        <!--产品推荐-->
+        <ImageView
+            android:id="@+id/vendor_deliver_order_failure_forward_image"
+            android:layout_centerHorizontal="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/vendor_deliver_order_failure_forward"
+            app:layout_aspectRatio="160.7%"
+            app:layout_marginLeftPercent="2.21%"
+            app:layout_marginTopPercent="42.04%"
+            app:layout_widthPercent="82.03%"/>
+
+        <TextView
+            android:id="@+id/vendor_deliver_order_failure_phone"
+            style="@style/Vendor.Text"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@{model.inputString}"
+            android:textSize="@dimen/text_size_33"
+            app:layout_marginTopPercent="51.36%"
+            app:layout_widthPercent="80%"/>
+
+        <TextView
+            android:id="@+id/vendor_deliver_order_failure_message"
+            style="@style/Vendor.Text"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:text="@{model.getExtraString}"
+            android:textSize="@dimen/text_size_28"
+            android:textStyle="bold"
+            app:layout_marginLeftPercent="23.30%"
+            app:layout_marginTopPercent="58.5%"
+            app:layout_widthPercent="66.9%"/>
+        <!--按钮-->
+        <FrameLayout
+            style="@style/Vendor.Text"
+            android:layout_centerHorizontal="true"
+            app:layout_marginTopPercent="89.5%">
+            <!--android:background="@drawable/vendor_deliver_order_failure_reput"-->
+            <Button
+                android:id="@+id/vendor_fai_input_btn"
+                style="@style/Vendor.Text"
+                android:layout_below="@+id/vendor_deliver_order_failure_forward_image"
+                android:background="@drawable/button_back_select"
+                android:gravity="center"
+                android:onClick="@{model.onClick}"
+                android:text="@string/vendor_deliver_failure_again"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_32"/>
+        </FrameLayout>
+
+
+        <!--返回按钮-->
+        <!--<FrameLayout-->
+        <!--android:visibility="gone"-->
+        <!--style="@style/Vendor.Text"-->
+        <!--android:layout_below="@+id/vendor_deliver_order_failure_forward_image"-->
+        <!--android:background="@drawable/vendor_deliver_order_success_finish"-->
+        <!--app:layout_marginLeftPercent="33.07%"-->
+        <!--app:layout_marginTopPercent="16.25%">-->
+
+        <!--<Button-->
+        <!--android:id="@+id/vendor_fai_back_btn"-->
+        <!--style="@style/Vendor.Text"-->
+        <!--android:layout_below="@+id/vendor_deliver_order_failure_forward_image"-->
+        <!--android:background="@drawable/vendor_deliver_order_success_finish"-->
+        <!--android:gravity="center"-->
+        <!--android:onClick="@{model.onClick}"-->
+        <!--android:text="@{@string/vendor_common_back_timeleft_format(model.timeLeft)}"-->
+        <!--android:textColor="@color/white"-->
+        <!--android:textSize="@dimen/text_size_36"-->
+        <!--tools:text="返回（59）" />-->
+        <!--</FrameLayout>-->
+
+        <ImageView
+            android:id="@+id/vendor_deliver_order_failure_image"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/vendor_deliver_order_failure_image"
+            app:layout_aspectRatio="137.7%"
+            app:layout_marginTopPercent="4.31%"
+            app:layout_widthPercent="19.66%"/>
+
+
+    </android.support.percent.PercentRelativeLayout>
+
+</layout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="model"
+            type="com.want.vmc.product.info.payment.ReChoosePaymentViewModel" />
+    </data>
+
+    <!--
+    ~
+    ~ 
+    ~
+    -->
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:background="@drawable/product_back"
+            android:gravity="center"
+            app:layout_heightPercent="50%">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawablePadding="@dimen/dp16"
+                android:gravity="center_vertical"
+                android:lineSpacingExtra="10dp"
+                android:text="@{model.getPaymentDescription(context)}"
+                app:drawableLeftSrc="@{model.paymentIcon}"
+                tools:drawableLeft="@drawable/icon_alipay_normal"
+                tools:text="现金支付\n0.5元、1元、5元、10元" />
+
+        </FrameLayout>
+
+        <Button
+            android:id="@id/product_rechoose_payment"
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/vendor_frame_background_red"
+            android:gravity="center"
+            android:onClick="@{model.rechoosePayment}"
+            android:text="@string/product_payment_rechoose"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            app:layout_heightPercent="45%" />
+    </android.support.percent.PercentRelativeLayout>
+</layout>

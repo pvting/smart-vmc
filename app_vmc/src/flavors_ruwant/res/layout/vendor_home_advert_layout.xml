@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.want.vmc.home.advert.AdvertViewModel" />
+
+    </data>
+
+    <!--
+    ~
+    ~ 视频播放布局
+    ~
+    -->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <com.pili.pldroid.player.widget.PLVideoView
+        android:id="@+id/advert_video"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/vendor_button_bg_white_shap"
+        app:displayAspectRatio="@{model.displayAspectRatio}"
+        app:onCompletion="@{model.onCompletion}"
+        app:onError="@{model.onError}"
+        app:videoPath="@{model.videoPath}" />
+        <ImageView
+            android:layout_width="match_parent"
+            android:visibility="@{model.isLoading}"
+            android:background="@drawable/vendor_home_video_loading_rec"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_margin="15dp"
+            android:src="@drawable/vendor_home_not_touch"
+            android:layout_height="wrap_content" />
+
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <vmc.project.ui.view.CornerImageView
+                    android:id="@id/cornerTopLeft"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:CCornerWhich="CTopLeft"
+                    app:CBackground="#00000000"
+                    app:CCornerRadius="20dp"
+                    />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <vmc.project.ui.view.CornerImageView
+                    android:id="@id/cornerTopRight"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:CCornerWhich="CTopRight"
+                    app:CBackground="#00000000"
+                    app:CCornerRadius="20dp"
+                    />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <vmc.project.ui.view.CornerImageView
+                    android:id="@id/cornerBottomLeft"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:CCornerWhich="CBottomLeft"
+                    app:CBackground="#00000000"
+                    app:CCornerRadius="20dp"
+                    />
+
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <vmc.project.ui.view.CornerImageView
+                    android:id="@id/cornerBottomRight"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:CCornerWhich="CBottomRight"
+                    app:CBackground="#00000000"
+                    app:CCornerRadius="20dp"
+                    />
+
+            </FrameLayout>
+
+        </FrameLayout>
+
+
+
+
+
+    </FrameLayout>
+
+</layout>

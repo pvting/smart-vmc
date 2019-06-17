@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+
+    <!--
+    ~
+    ~ 商品信息页面
+    ~
+    -->
+    <android.support.percent.PercentRelativeLayout
+        android:id="@id/vendor_home_style_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- 产品展示区 -->
+        <FrameLayout
+            android:id="@id/product_info_details"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            app:layout_heightPercent="49.7%"
+            app:layout_widthPercent="100%"/>
+
+        <!-- 二维码扫描区 -->
+        <FrameLayout
+            android:id="@id/product_info_scanner"
+            android:layout_below="@+id/product_info_details"
+            app:layout_heightPercent="22.7%"
+            app:layout_widthPercent="100%"/>
+
+        <!-- 支付方式选择区 -->
+        <FrameLayout
+            android:id="@id/product_info_payment"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/product_info_scanner"
+            app:layout_heightPercent="18.3%"
+            app:layout_widthPercent="100%"/>
+
+
+        <!-- 正在出货动画 -->
+        <FrameLayout
+            android:id="@+id/vendor_product_info_outgooding"
+            android:layout_width="match_parent"
+            android:layout_below="@id/product_info_details"
+            android:gravity="center"
+            android:visibility="gone"
+            app:layout_heightPercent="41%"
+            app:layout_widthPercent="100%"/>
+
+
+        <!-- 返回 -->
+        <FrameLayout
+            android:id="@+id/vendor_product_info_back"
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@id/product_info_payment"
+            android:layout_centerHorizontal="true"
+            app:layout_heightPercent="9.3%"
+            app:layout_widthPercent="100%"/>
+
+
+        <!-- 提示-->
+        <TextView
+            android:id="@+id/vendor_outproduct_loading"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@id/product_info_payment"
+            android:gravity="center"
+            android:text="正在出货中...请稍后!"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_36"
+            android:visibility="invisible"
+            app:layout_heightPercent="9.3%"
+            app:layout_widthPercent="100%"/>
+
+
+    </android.support.percent.PercentRelativeLayout>
+</layout>

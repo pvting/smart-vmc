@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+    ~
+    ~ 
+    ~
+    -->
+
+    <!--&lt;!&ndash; 基础主题 &ndash;&gt;-->
+    <!--<style name="AppTheme" parent="SDKTheme.NoActionBar">-->
+
+
+    <!--</style>-->
+
+    <!--&lt;!&ndash; 全屏主题 &ndash;&gt;-->
+    <!--<style name="AppTheme.Fullscreen">-->
+        <!--&lt;!&ndash;<item name="android:windowBackground">@drawable/window_background_bg</item>&ndash;&gt;-->
+        <!--<item name="android:windowFullscreen">true</item>-->
+        <!--<item name="android:windowContentOverlay">@null</item>-->
+        <!--<item name="base_background">@null</item>-->
+    <!--</style>-->
+
+
+
+</resources>

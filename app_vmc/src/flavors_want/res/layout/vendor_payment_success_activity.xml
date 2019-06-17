@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="model"
+            type="com.want.vendor.product.paysuccess.help.HelpViewModel"/>
+    </data>
+
+    <android.support.percent.PercentRelativeLayout
+        style="@style/Vendor.Frame"
+        android:id="@id/vendor_home_style_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            app:layout_widthPercent="24.9%"
+            android:layout_height="@dimen/dp1"
+            app:layout_marginLeftPercent="10.4%"
+            app:layout_marginTopPercent="6.4%"
+            android:background="@color/white"/>
+
+       <TextView
+           style="@style/Vendor.Text"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           app:layout_marginTopPercent="4.8%"
+           android:layout_centerHorizontal="true"
+           android:text="@string/find_more"
+           android:textColor="@color/white"
+           tools:text="参与活动发现更多"/>
+
+        <View
+            app:layout_widthPercent="24.9%"
+            android:layout_height="@dimen/dp1"
+            app:layout_marginLeftPercent="66.7%"
+            app:layout_marginTopPercent="6.4%"
+            android:background="@color/white"/>
+
+        <WebView
+            android:layout_centerHorizontal="true"
+            app:layout_widthPercent="82.0%"
+            app:layout_heightPercent="63.0%"
+            app:layout_marginTopPercent="12.7%"/>
+
+        <Button
+            app:layout_widthPercent="33.9%"
+            app:layout_heightPercent="16.9%"
+            android:layout_centerHorizontal="true"
+            app:layout_marginTopPercent="82.6%"
+            android:background="@drawable/vendor_payment_button"
+            style="@style/Vendor.Text.LargeNor"
+            android:textColor="@color/white"
+            android:text="@string/go_buy"/>
+
+    </android.support.percent.PercentRelativeLayout>
+
+</layout>

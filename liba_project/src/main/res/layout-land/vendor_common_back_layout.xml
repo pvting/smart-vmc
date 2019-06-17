@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="model"
+            type="vmc.vendor.common.back.BackViewModel" />
+    </data>
+
+    <!--
+    ~
+    ~ 公共返回视图
+    ~
+    -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/vendor_frame_background_red_boueki"
+        android:onClick="@{model.onBackClicked}"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/Vendor.Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="24dp"
+            android:text="@{@string/vendor_common_back_timeleft_format(model.timeLeft)}"
+            android:textColor="@color/white"
+            tools:text="(59)" />
+
+    </FrameLayout>
+</layout>

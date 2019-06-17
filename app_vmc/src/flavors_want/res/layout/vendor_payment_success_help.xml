@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="model"
+            type="com.want.vendor.product.paysuccess.help.HelpViewModel"/>
+    </data>
+
+    <android.support.percent.PercentRelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/vendor_payment_status_tips_imageview"
+            android:src="@drawable/vendor_payment_successpay"
+            app:layout_widthPercent="19.7%"
+            app:layout_heightPercent="42.2%"
+            android:layout_centerHorizontal="true"
+            app:layout_marginTopPercent="12.0%"/>
+
+        <TextView
+            android:text="@{model.outPayStatus}"
+            style="@style/Vendor.Text.LargeNor"
+            android:textColor="@color/white"
+            android:gravity="center"
+            tools:text="出货成功\n请按退货退货"
+            android:layout_centerHorizontal="true"
+            app:layout_marginTopPercent="60.2%" />
+
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_marginTopPercent="79.7%"
+            android:layout_centerHorizontal="true"
+            android:text="问题求助"
+            android:visibility="@{model.showHelp}"
+            style="@style/Vendor.Text.LargeNor"
+            android:textColor="@color/white"
+            android:onClick="@{model.skipToHelp}"
+            android:background="@drawable/vendor_payment_help_bg" />
+
+    </android.support.percent.PercentRelativeLayout>
+
+</layout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="model"
+            type="com.want.vendor.home.guide.problem.ProblemHelpViewModel" />
+    </data>
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/vendor_guide_hint_center">
+
+        <TextView
+            android:id="@+id/vendor_guide_hint_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:textColor="@color/white"
+            android:layout_centerHorizontal="true"
+            android:text="@string/vendor_guide_hint_name_tv"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_size_36"
+            app:layout_marginTopPercent="5.45%" />
+
+        <ImageView
+            app:layout_widthPercent="37.3%"
+            app:layout_heightPercent="45.0%"
+            android:src="@drawable/vendor_guide_cancel_icon"
+            android:layout_centerHorizontal="true"
+            app:layout_marginTopPercent="20.4%"/>
+
+        <TextView
+            android:id="@+id/vendor_guide_hint_below_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_24"
+            app:layout_marginTopPercent="80.2%"
+            android:text="@string/vendor_guide_hint_below_tv" />
+
+    </android.support.percent.PercentRelativeLayout>
+    </layout>

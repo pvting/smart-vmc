@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="360dp"
+    android:layout_height="260dp"
+    android:layout_gravity="center"
+    android:background="@drawable/supply_coin_layout_bg_radius"
+    android:orientation="vertical">
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="76dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/dp10"
+        android:paddingRight="@dimen/dp10">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="请补满硬币盒子"
+            android:textColor="@color/base_red_3"
+            android:textSize="@dimen/text_size_24" />
+
+        <ImageView
+            android:id="@+id/supply_coin_dialog_close_image"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_dialog_close" />
+    </android.support.percent.PercentRelativeLayout>
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical">
+
+        <EditText
+            android:id="@+id/supply_coin_dialog_supply_machine_edit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/base_border_top_shape_gray"
+            android:inputType="numberDecimal"
+            android:paddingLeft="@dimen/dp10"
+            android:textSize="@dimen/text_size_18"
+        android:hint="用售货机硬币补" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp10"
+            android:text="元"
+            android:textSize="@dimen/text_size_18" />
+    </android.support.percent.PercentRelativeLayout>
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical">
+
+        <EditText
+            android:id="@+id/supply_coin_dialog_supply_self_edit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/base_border_top_shape_gray"
+            android:hint="用自带的硬币补"
+            android:inputType="numberDecimal"
+            android:paddingLeft="@dimen/dp10"
+            android:textSize="@dimen/text_size_18" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp10"
+            android:text="元"
+            android:textSize="@dimen/text_size_18" />
+    </android.support.percent.PercentRelativeLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:id="@+id/supply_coin_dialog_complete_btn"
+        android:layout_height="64dp"
+        android:background="@drawable/pick_product_btn_selector"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_22"
+        android:text="完成" />
+
+</LinearLayout>

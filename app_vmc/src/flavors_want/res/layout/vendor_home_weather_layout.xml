@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.want.vendor.home.info.InfoViewModel" />
+
+    </data>
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@id/vendor_home_weather_sunny_background"
+            app:layout_marginLeftPercent="3.12%"
+            app:layout_marginRightPercent="2.99%"
+            app:layout_aspectRatio="21.08%"
+            android:background="@{model.backGround}"
+            app:layout_widthPercent="93.88%"/>
+
+        <TextView
+            android:id="@+id/vendor_time_tv"
+            android:text="@{model.time}"
+            android:textColor="@color/white"
+            android:textSize="64dp"
+            app:layout_marginTopPercent="8.56%"
+            android:layout_alignBaseline="@+id/vendor_date_tv"
+            app:layout_heightPercent="65.78%"
+            android:layout_width="wrap_content"
+            app:layout_marginLeftPercent="6.64%"
+            tools:text="10:00" />
+
+        <ImageView
+            android:id="@+id/vendor_home_position_icon"
+            app:layout_widthPercent="2.21%"
+            app:layout_marginTopPercent="61.64%"
+            app:layout_aspectRatio="123.52%"
+            app:layout_heightPercent="13.81%"
+            app:layout_marginLeftPercent="7.41%"
+            android:src="@drawable/vendor_home_position_icon" />
+
+        <TextView
+            android:id="@+id/vendor_space_tv"
+            app:layout_marginTopPercent="61.18%"
+            android:text="@{model.city}"
+            app:layout_widthPercent="4.90%"
+            app:layout_heightPercent="13.81%"
+            app:layout_marginLeftPercent="10.41%"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_15"
+            tools:text="上海" />
+
+        <ImageView
+            android:id="@+id/vendor_weather_img"
+            app:layout_marginTopPercent="61.84%"
+            app:layout_widthPercent="5.46%"
+            app:layout_heightPercent="27.63%"
+            app:layout_marginLeftPercent="16.27%"
+            android:src="@{model.iconid}" />
+
+        <TextView
+            android:id="@+id/vendor_weather_tv"
+            android:text="@{model.weather}"
+            app:layout_marginTopPercent="61.85%"
+            app:layout_marginLeftPercent="22.55%"
+            android:layout_width="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_10" />
+
+        <TextView
+            android:id="@+id/vendor_hello_tv"
+            android:text="@{model.hello}"
+            app:layout_heightPercent="24.34%"
+            android:layout_width="wrap_content"
+            app:layout_marginTopPercent="13.68%"
+            app:layout_marginLeftPercent="30.87%"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_26"
+            tools:text="上午好"/>
+        <ImageView
+            android:id="@+id/vendor_netWork"
+            android:layout_height="@dimen/text_size_25"
+            android:layout_width="wrap_content"
+            app:layout_marginTopPercent="17.68%"
+            app:layout_marginLeftPercent="44.87%"
+            android:src="@drawable/vendor_home_info_network1"
+            android:background="@{model.netWorkIcon}"
+            />
+
+        <TextView
+            android:id="@+id/vendor_date_tv"
+            app:layout_marginTopPercent="36.97%"
+            android:text="@{model.date}"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_18"
+            app:layout_widthPercent="23.08%"
+            app:layout_aspectRatio="16.44%"
+            app:layout_marginLeftPercent="30.87%"
+            tools:text="星期日 7月24日" />
+
+        <TextView
+            android:paddingTop="5dp"
+            android:id="@+id/vendor_temperature_tv"
+            android:text="@{model.temperature}"
+            android:layout_height="wrap_content"
+            app:layout_marginTopPercent="62.14%"
+            app:layout_widthPercent="8.07%"
+            app:layout_marginLeftPercent="0.125%"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_32"
+            android:layout_alignLeft="@+id/vendor_weather_tv"
+            android:layout_alignStart="@+id/vendor_weather_tv"
+            />
+
+        <TextView
+            android:id="@+id/vendor_machineID_tv"
+            app:layout_marginTopPercent="62.18%"
+            android:text="@{model.factoryCode}"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_17"
+            app:layout_marginLeftPercent="30.87%"
+            tools:text="机器号：93002951" />
+
+        <!--android:layout_alignBaseline="@+id/vendor_temperature_tv"-->
+
+        <TextView
+            android:id="@+id/vendor_hottel_tv"
+            app:layout_marginTopPercent="69.04%"
+            android:textColor="@color/white"
+            android:text="@{model.configNum}"
+            android:textSize="@dimen/text_size_17"
+            android:layout_alignBaseline="@+id/vendor_temperature_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_marginLeftPercent="30.87%"
+            tools:text="客服电话：021-61151616"/>
+
+    </android.support.percent.PercentRelativeLayout>
+
+</layout>

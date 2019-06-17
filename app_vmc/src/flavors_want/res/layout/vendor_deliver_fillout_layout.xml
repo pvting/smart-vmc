@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.want.vendor.deliver.fillout.FillOutViewModel" />
+
+    </data>
+
+    <android.support.percent.PercentRelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <View
+            android:id="@+id/vendor_deliver_order_view1"
+            android:layout_height="2dp"
+            android:layout_below="@+id/vendor_deliver_order_edittext"
+            android:background="@color/base_black_1"
+            app:layout_marginLeftPercent="8.85%"
+            app:layout_marginTopPercent="2.15%"
+            app:layout_widthPercent="10.15%" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_below="@+id/vendor_deliver_order_edittext"
+            android:gravity="center"
+            android:text="@string/vendor_deliver_keyboard"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dp20"
+            app:layout_heightPercent="2.41%"
+            app:layout_marginLeftPercent="21.87%"
+            app:layout_marginTopPercent="1.25%"
+            app:layout_widthPercent="12.5%" />
+
+        <View
+            android:layout_height="2dp"
+            android:layout_below="@+id/vendor_deliver_order_edittext"
+            android:background="@color/base_black_1"
+            app:layout_marginLeftPercent="35.67%"
+            app:layout_marginTopPercent="2.15%"
+            app:layout_widthPercent="10.15%" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_below="@+id/vendor_deliver_order_edittext"
+            android:gravity="center"
+            android:text="@string/vendor_deliver_or"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dp20"
+            app:layout_heightPercent="2.41%"
+            app:layout_marginLeftPercent="48.3%"
+            app:layout_marginTopPercent="1.25%"
+            app:layout_widthPercent="3.12%" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_height="2dp"
+            android:layout_below="@+id/vendor_deliver_order_edittext"
+            android:background="@color/base_black_1"
+            app:layout_marginLeftPercent="54.29%"
+            app:layout_marginTopPercent="2.15%"
+            app:layout_widthPercent="10.15%" />
+
+        <ProgressBar
+            android:id="@+id/pay_qr_loading"
+            style="@style/Widget.AppCompat.ProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="@{model.progressIsVisible}" />
+
+        <TextView
+            android:id="@+id/vendor_deliver_order_text"
+            android:layout_below="@+id/vendor_deliver_order_edittext"
+            android:gravity="center"
+            android:text="@string/vendor_deliver_scan_input"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dp20"
+            app:layout_heightPercent="2.41%"
+            app:layout_marginLeftPercent="65.75%"
+            app:layout_marginRightPercent="65.62%"
+            app:layout_marginTopPercent="1.25%"
+            app:layout_widthPercent="12.5%" />
+
+        <View
+            android:id="@+id/vendor_deliver_order_view"
+            android:layout_height="2dp"
+            android:layout_below="@+id/vendor_deliver_order_edittext"
+            android:background="@color/base_black_1"
+            app:layout_marginLeftPercent="79.55%"
+            app:layout_marginTopPercent="2.15%"
+            app:layout_widthPercent="10.15%" />
+
+        <include
+            android:id="@+id/vendor_deliver_order_keyboard_image"
+            layout="@layout/vendor_deliver_input_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/vendor_deliver_order_text"
+            app:layout_heightPercent="30.4%"
+            app:layout_marginLeftPercent="8.98%"
+            app:layout_marginTopPercent="2.41%"
+            app:layout_widthPercent="34.15%"
+            app:model="@{model}" />
+
+        <ImageView
+            android:id="@+id/vendor_deliver_order_code_image"
+            android:layout_below="@+id/vendor_deliver_order_text"
+            android:layout_toRightOf="@+id/textView3"
+            android:scaleType="fitXY"
+            android:src="@drawable/vendor_deliver_order_code"
+            app:layout_heightPercent="30.4%"
+            app:layout_marginLeftPercent="6.8%"
+            app:layout_marginTopPercent="2.41%"
+            app:layout_widthPercent="34.15%" />
+        <!--确定按钮-->
+        <FrameLayout
+            style="@style/Vendor.Text"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/vendor_deliver_order_success_continue"
+            android:gravity="center"
+            android:textColor="@color/white"
+            app:layout_marginTopPercent="89.5%">
+
+            <Button
+                android:id="@+id/vendor_deliver_config_btn"
+                style="@style/Vendor.Text"
+                android:layout_below="@+id/vendor_deliver_order_keyboard_image"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/vendor_deliver_order_success_continue"
+                android:gravity="center"
+                android:onClick="@{model.onClick}"
+                android:text="@string/ok"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_36" />
+        </FrameLayout>
+
+        <!--返回按钮-->
+        <!--android:text="@{@string/vendor_common_back_timeleft_format(model.timeLeft)}"-->
+        <!--android:textColor="@color/white"-->
+        <!--&lt;!&ndash;tools:text="(59)"&ndash;&gt;-->
+        <!--<FrameLayout-->
+            <!--android:visibility="gone"-->
+            <!--style="@style/Vendor.Text"-->
+            <!--android:layout_below="@+id/vendor_deliver_order_keyboard_image"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:background="@drawable/vendor_deliver_order_cancle"-->
+            <!--android:gravity="center"-->
+            <!--app:layout_marginLeftPercent="33.07%"-->
+            <!--app:layout_marginTopPercent="13.20%">-->
+
+            <!--<Button-->
+                <!--android:id="@+id/vendor_deliver_back_btn"-->
+                <!--style="@style/Vendor.Text"-->
+                <!--tools:text="返回(59)"-->
+                <!--android:layout_below="@+id/vendor_deliver_config"-->
+                <!--android:background="@drawable/vendor_deliver_order_success_finish"-->
+                <!--android:gravity="center"-->
+                <!--android:onClick="@{model.onClick}"-->
+                <!--android:text="@{@string/vendor_common_back_timeleft_format(model.timeLeft)}"-->
+                <!--android:textColor="@color/white"-->
+                <!--android:textSize="@dimen/text_size_36"-->
+                <!--/>-->
+        <!--</FrameLayout>-->
+
+        <TextView
+            android:id="@+id/vendor_deliver_order_image_text"
+            android:layout_alignLeft="@+id/view"
+            android:layout_below="@+id/vendor_deliver_order_edittext"
+            android:text="@string/vendor_deliver_scan_forward"
+            android:textSize="@dimen/text_size_26"
+            app:layout_heightPercent="5.27%"
+            app:layout_marginLeftPercent="7.8%"
+            app:layout_marginRightPercent="8.98%"
+            app:layout_marginTopPercent="25.63%"
+            app:layout_widthPercent="29.16%" />
+        <EditText
+            android:id="@+id/et_input"
+            android:layout_width="1dp"
+            android:layout_height="1dp"
+            android:cursorVisible="false">
+            <requestFocus/>
+        </EditText>
+
+        <!--编辑框界面-->
+
+        <!--提示界面-->
+        <TextView
+            android:id="@+id/vendor_order_prompt"
+            style="@style/Vendor.Text"
+            android:layout_below="@+id/vendor_deliver_order_icon_image"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="请输入提货码"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_36"
+            app:layout_aspectRatio="16.66%"
+            app:layout_marginTopPercent="1.4%"
+            app:layout_widthPercent="35.12%" />
+
+        <!--引导图界面-->
+        <ImageView
+            android:id="@+id/vendor_deliver_order_icon_image"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/vendor_deliver_order_icon"
+            app:layout_aspectRatio="87%"
+            app:layout_widthPercent="35.16%" />
+
+        <TextView
+            android:id="@+id/vendor_deliver_order_edittext"
+            style="@style/Vendor.Text"
+            android:singleLine="true"
+            android:background="@drawable/vendor_deliver_order_frame"
+            android:gravity="center"
+            android:text="@{model.input}"
+            android:textSize="@dimen/text_size_35"
+            app:layout_aspectRatio="15.87%"
+            app:layout_marginLeftPercent="8.85%"
+            app:layout_marginTopPercent="1.25%"
+            app:layout_widthPercent="82.03%"
+            android:layout_below="@+id/vendor_order_prompt"
+            android:layout_alignRight="@+id/vendor_deliver_order_image_text"
+            android:layout_alignEnd="@+id/vendor_deliver_order_image_text">
+        </TextView>
+
+    </android.support.percent.PercentRelativeLayout>
+
+</layout>

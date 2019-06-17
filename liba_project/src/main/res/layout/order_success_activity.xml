@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/window_background_bg"
+    android:orientation="vertical"
+    android:padding="@dimen/dp10">
+
+
+    <ImageView
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/order_success_kou"
+        app:layout_aspectRatio="100%"
+        app:layout_heightPercent="13%"
+        app:layout_marginTopPercent="7%" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/pay_success"
+        android:textColor="@color/white"
+        android:textSize="36dp"
+        android:textStyle="bold"
+        app:layout_marginTopPercent="22%" />
+
+    <TextView
+        android:id="@+id/message_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/wait_out_product"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        app:layout_marginTopPercent="26%" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button_yellow"
+        android:gravity="center"
+        android:text="@string/question_help"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_30"
+        app:layout_marginTopPercent="29%" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_marginTopPercent="38%">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp1"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/dp10"
+            android:layout_marginStart="@dimen/dp10"
+            android:layout_weight="1"
+            android:background="@color/white" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/find_more"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp1"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/dp10"
+            android:layout_marginRight="@dimen/dp10"
+            android:layout_weight="1"
+            android:background="@color/white" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/order_success_game_image"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/order_success_dart"
+        app:layout_heightPercent="34%"
+        app:layout_marginTopPercent="43%"
+        app:layout_widthPercent="82%" />
+
+
+    <TextView
+        android:id="@+id/order_success_shop_text"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button_maroon"
+        android:gravity="center"
+        android:text="@string/go_buy"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_30"
+        app:layout_heightPercent="7%"
+        app:layout_marginTopPercent="81%"
+        app:layout_widthPercent="33%" />
+
+    <vmc.project.ui.view.CountDownView
+        android:id="@+id/back_text"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button_transparent"
+        android:gravity="center"
+        android:text="@string/finish"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_30"
+        app:layout_heightPercent="7%"
+        app:layout_marginTopPercent="91%"
+        app:layout_widthPercent="33%" />
+
+
+</android.support.percent.PercentRelativeLayout>

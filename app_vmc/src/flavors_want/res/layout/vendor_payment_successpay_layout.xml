@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.want.vendor.product.paysuccess.help.HelpViewModel" />
+    </data>
+
+    <android.support.percent.PercentRelativeLayout
+        android:id="@id/vendor_home_style_bg"
+        style="@style/Vendor.Frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/payment_success_help"
+            android:layout_width="match_parent"
+            app:layout_heightPercent="38.43%"></FrameLayout>
+
+        <FrameLayout
+
+            android:id="@+id/payment_success_campaign"
+            android:layout_below="@+id/payment_success_help"
+            android:layout_centerHorizontal="true"
+            app:layout_heightPercent="52.27%"
+            app:layout_widthPercent="86.53%">
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/payment_success_back"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/payment_success_campaign"
+            app:layout_heightPercent="9.30%">
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/vendor_outproduct_loading"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/payment_success_campaign"
+            android:gravity="center"
+            android:text="正在出货中...请稍后!"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_36"
+            android:visibility="invisible"
+            app:layout_heightPercent="9.30%" />
+
+
+    </android.support.percent.PercentRelativeLayout>
+
+</layout>

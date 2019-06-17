@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+    ~
+    ~ 
+    ~
+    -->
+    <!-- 支付扫码页面 -->
+    <string name="scan_call_help_tel">如需帮助，请拨打：</string>
+    <string name="scan_call_help">021-61150188</string>
+    <string name="scan_choose_payway">选择左侧支付方式完成付款</string>
+    <string name="scan_operate_msg">请按照提示完成操作</string>
+    <string name="scan_operate_again_msg">请按照提示完成操作</string>
+    <string name="scan_pay_and_waitproduct">付款并等待出货</string>
+    <string name="scan_pay_success">支付成功</string>
+    <string name="scan_pay_faile">支付失败</string>
+    <string name="scan_no_payway">未选择付款方式</string>
+    <string name="scan_payway_alipay">支付宝付款</string>
+    <string name="scan_payway_wechat">微信付款</string>
+    <string name="scan_payway_cash">现金付款</string>
+    <string name="scan_payway_wangbi">旺币付款</string>
+    <string name="scan_choose_no_payway">请选择左侧支付方式付款</string>
+    <string name="scan_choose_payway_alipay">请打开支付宝扫码</string>
+    <string name="scan_choose_payway_wechat">请打开微信扫码</string>
+    <string name="scan_choose_payway_cash">请现金支付</string>
+    <string name="scan_choose_payway_wangbi">请使用旺币支付</string>
+    <string name="scan_outgood_success">出货成功</string>
+    <string name="scan_outgood_success_message">请取走您的货物</string>
+    <string name="scan_outgood_faild">出货失败</string>
+    <string name="scan_outgood_faild_message">请联系客服</string>
+    <string name="scan_network_error">网络异常</string>
+    <string name="scan_network_error_msg">网络异常，请重试</string>
+
+
+</resources>

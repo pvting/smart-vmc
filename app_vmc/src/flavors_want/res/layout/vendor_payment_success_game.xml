@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.want.vendor.product.paysuccess.game.GameViewModel">
+        </variable>
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/vendor_success_hint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            >
+
+            <TextView
+                android:id="@+id/game_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="17dp"
+                android:layout_marginRight="17dp"
+
+                android:text="参与活动发现更多"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_33" />
+
+            <View
+                android:id="@+id/left_line"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/game_hint"
+                android:background="#fff">
+
+            </View>
+
+            <View
+                android:id="@+id/right_line"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/game_hint"
+                android:background="#fff">
+
+            </View>
+
+        </RelativeLayout>
+        <Button
+            android:id="@+id/payment_success_help"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/vendor_payment_button"
+            android:gravity="center"
+            android:visibility="@{model.continueIsShow}"
+            android:text="@{model.continueIsShop}"
+            android:onClick="@{model.onClick}"
+            android:textColor="@color/white"
+            android:textSize="36dp" />
+
+        <ImageView
+            android:layout_above="@id/payment_success_help"
+            android:layout_below="@id/vendor_success_hint"
+            android:id="@+id/vendor_game_icon"
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"
+            android:src="@drawable/vendor_paysuccess_game" />
+    </RelativeLayout>
+</layout>

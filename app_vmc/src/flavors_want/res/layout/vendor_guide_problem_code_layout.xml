@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="model"
+            type="com.want.vendor.tips.problem.ProblemViewModel"/>
+    </data>
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/vendor_guide_problem_img_center"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/vendor_error_help"
+            android:orientation="vertical"
+            app:layout_heightPercent="68.8%"
+            app:layout_marginTopPercent="20.8%"
+            app:layout_widthPercent="72.7%">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="470"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/vendor_guide_problem_name_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="33dp"
+                    android:gravity="center"
+                    android:text="@string/vendor_guide_problem_name_tv"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_18"
+                    tools:textColor="@color/black"
+                />
+
+                <ImageView
+                    android:id="@+id/vendor_guide_problem_img_code"
+                    android:layout_width="260dp"
+                    android:layout_height="260dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="30dp"
+                    android:scaleType="fitCenter"
+                />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="88"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/vendor_guide_problem_tel_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/vendor_guide_problem_tel_tv"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_18"
+                    android:visibility="@{model.telphoneVisible}"/>
+
+                <TextView
+                    android:id="@+id/vendor_guide_problem_num_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{model.customerTelphone}"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_28"
+                    tools:text="@string/vendor_guide_problem_num_tv"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.percent.PercentRelativeLayout>
+</layout>

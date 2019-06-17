@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.want.vendor.home.surprise.SurpriseViewModel"></variable>
+
+    </data>
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            xmlns:gifView="http://schemas.android.com/apk/res-auto"
+            xmlns:fresco="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:onClick="@{model.onClick}"
+            android:background="@drawable/vendor_home_surprise_background"
+            >
+           <!-- <TextView
+                android:layout_gravity="center"
+                style="@style/Vendor"
+                android:id="@+id/vendor_home_surprise_tv"
+                app:layout_widthPercent="42.85%"
+                app:layout_aspectRatio="27.5%"
+                app:layout_marginTopPercent="70.76%"
+                app:layout_marginLeftPercent="28.57%"
+                android:drawableTop="@drawable/vendor_home_surprise_icon"
+                android:text="@string/home_surprise"
+                android:textSize="@dimen/text_size_30"
+                />-->
+        <!--<ImageView-->
+            <!--android:id="@+id/vendor_home_surprise_img"-->
+            <!--app:layout_marginLeftPercent="3.12%"-->
+            <!--app:layout_marginRightPercent="2.99%"-->
+            <!--app:layout_aspectRatio="92.85%"-->
+            <!--android:background="@drawable/vendor_home_surprise_background"-->
+            <!--app:layout_widthPercent="36.45%"/>-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:orientation="vertical">
+
+                <!--<pl.droidsonroids.gif.GifImageView-->
+                <!--android:id="@+id/vendor_home_surprise_img"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="0dp"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:src="@drawable/vendor_home_surprise_icon_gif"-->
+                <!--android:layout_weight="179" />-->
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/surprise_img"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:layout_width="165dp"
+                    android:layout_height="165dp"
+                    android:layout_gravity="center"
+                    fresco:placeholderImage="@drawable/vendor_home_surprise_icon"
+                     />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/home_surprise"
+                    android:textSize="@dimen/text_size_30" />
+                <!-- <TextView
+                     android:layout_gravity="center"
+                     style="@style/Vendor"
+                     android:id="@+id/vendor_home_surprise_tv"
+                     app:layout_widthPercent="42.85%"
+                     app:layout_aspectRatio="27.5%"
+                     app:layout_marginTopPercent="70.76%"
+                     app:layout_marginLeftPercent="28.57%"
+                     android:drawableTop="@drawable/vendor_home_surprise_icon"
+                     android:text="@string/home_surprise"
+                     android:textSize="@dimen/text_size_30"
+                />-->
+            </LinearLayout>
+        </FrameLayout>
+    </android.support.percent.PercentRelativeLayout>
+
+</layout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.want.vendor.home.shopping.ShoppingViewModel" />
+    </data>
+
+    <!--
+    ~
+    ~ 
+    ~
+    -->
+    <FrameLayout xmlns:gifView="http://schemas.android.com/apk/res-auto"
+        xmlns:fresco="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/vendor_home_shopping_background"
+        android:onClick="@{model.onClick}">
+
+       <!-- <TextView
+            style="@style/Vendor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawablePadding="20dp"
+            android:drawableTop="@drawable/vendor_home_shopping_icon"
+            android:gravity="center"
+            android:text="@string/home_shopping"
+            android:textSize="@dimen/text_size_30" />
+-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <!--<pl.droidsonroids.gif.GifImageView-->
+            <!--android:id="@+id/vendor_shopping_happy_img"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_marginTop="@dimen/dp40"-->
+            <!--android:layout_height="0dp"-->
+            <!--android:layout_weight="305"-->
+            <!--android:src="@drawable/vendor_home_shopping_icon_gif"-->
+            <!--android:layout_gravity="center"/>-->
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/shop_img"
+                android:layout_marginTop="80dp"
+                android:layout_width="224dp"
+                android:layout_height="224dp"
+                android:src="@drawable/vendor_home_shopping_icon_gif"
+                android:layout_gravity="center" />
+
+            <TextView
+                style="@style/Vendor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/home_shopping"
+                android:textSize="@dimen/text_size_30" />
+
+
+            <!--<TextView-->
+            <!--style="@style/Vendor"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:drawablePadding="20dp"-->
+            <!--android:drawableTop="@drawable/vendor_home_shopping_icon_gif"-->
+            <!--android:gravity="center"-->
+            <!--android:text="@string/home_shopping"-->
+            <!--android:textSize="@dimen/text_size_30" />-->
+        </LinearLayout>
+    </FrameLayout>
+</layout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="sunshine_bg">#FFAB00</color>
+    <color name="thunder_bg">#4A4A4A</color>
+    <color name="snow_bg">#4BBFDC</color>
+    <color name="cloudy_bg">#6D9159</color>
+    <color name="rain_bg">#7231AB</color>
+    <color name="fog_bg">#807285</color>
+    <color name="wind_bg">#68CAA6</color>
+
+    <color name="productlist_icon_bg">#666333</color>
+</resources>
